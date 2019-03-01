@@ -5,12 +5,12 @@ const ContactWrapper = styled.div`
 `
 
 class Contact extends Component {
-  render() {
-    return (
-      <ContactWrapper>
-      </ContactWrapper>
-    );
-  }
+  	render() {
+    	return (
+      		<ContactWrapper id="contact">
+      		</ContactWrapper>
+    	);
+  	}
 }
 
 export default Contact;
