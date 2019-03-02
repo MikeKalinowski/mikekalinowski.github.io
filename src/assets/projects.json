@@ -1,5 +1,5 @@
 [{    
-    "image": "asdf",
+    "image": "chat",
     "title": "Chat",
     "text": "This project was beautiful. It brought the beauty of all the people. All the people",
     "tags": ["React", "Semantic-ui", "Node.js", "Express.js", "PostgreSQL"],
@@ -9,7 +9,7 @@
     }
 },
 {    
-    "image": "asdf",
+    "image": "gatsby",
     "title": "Website based on design",
     "text": "What a great app, yes yes, great app, best app, best dev",
     "tags": ["React", "Gatsby", "Styled-components", "Graphql", "Figma"],
@@ -19,7 +19,7 @@
     }
 },
 {    
-    "image": "asdf",
+    "image": "rpg",
     "title": "RPG Game",
     "text": "Web browser game, best game!",
     "tags": ["JS", "HTML", "CSS"],

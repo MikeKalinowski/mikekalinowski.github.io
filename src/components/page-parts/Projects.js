@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components'
 import projects from '../../assets/projects.json'
 
+
 const ProjectsWrapper = styled.div`
 	width: 900px;
 	margin: 0 auto;
@@ -16,10 +17,11 @@ const SingleProjectWrapper = styled.div`
 	box-shadow: 0px 100px 70px -120px rgba(0,0,0,0.2);
 `
 
-const Image = styled.div`
+const Image = styled.img`
 	width: 400px;
-	height: 250px;
+	height: 225px;
 	background-color: grey;
+	box-shadow: 0px 0px 70px rgba(0,0,0,0.15);
 `
 
 const Description = styled.div`
@@ -69,6 +71,11 @@ const StyledButton = styled(Tag)`
 		color: #4e5d6c;
 		box-shadow: 0px 2px 0px 0px #a6827e;
 	}
+
+	:active {
+		transform: translateY(2px);
+		box-shadow: initial;
+	}
 `
 
 const Link = styled.a`
@@ -77,13 +84,22 @@ const Link = styled.a`
 `
 
 class Projects extends Component {
+	pickImage = (image) => {
+		switch (image) {
+			case 'chat': return require('../../assets/chat.png');
+  			case 'gatsby': return require('../../assets/gatsby.png');
+  			case 'rpg': return require('../../assets/rpg.png');
+  			default: return "";
+		}
+	}
+
 	render() {
 	    return (
 	      	<ProjectsWrapper id="projects">
 	      		{projects.map(project => {
 	      			return (
 		      			<SingleProjectWrapper key={project.title}>
-		      				<Image>
+		      				<Image src={this.pickImage(project.image)}>
 		      				</Image>
 		      				<Description>
 		      					<Title>
