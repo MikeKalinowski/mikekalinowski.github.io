@@ -34,6 +34,7 @@ const Title = styled.div`
 
 const Text = styled.div`
 	padding-top: 10px;
+	line-height: 150%;
 `
 
 const TagsWrapper = styled.div`
@@ -46,15 +47,15 @@ const TagsWrapper = styled.div`
 const buttonishMixin = () => 
 	css`
 		padding: 4px 8px;
-		background-color: grey;
-		color: white;
 		border-radius: 12px;
 		margin-right: 8px;
 		margin-bottom: 8px;
+		
 	`
 
 const Tag = styled.div`
-	${() => buttonishMixin}
+	${() => buttonishMixin};
+	border: 1px solid #333333;
 `
 
 const ButtonsWrapper = styled.div`
@@ -68,6 +69,7 @@ const StyledButton = styled.button`
 	font-family: inherit;
 	border: none;
 	${() => buttonishMixin};
+	color: white;
 	cursor: pointer;
 	background-color: #4e5d6c;
 	letter-spacing: 1px;
@@ -96,9 +98,9 @@ const Link = styled.a`
 class Projects extends Component {
 	pickImage = (image) => {
 		switch (image) {
-			case 'chat': return require('../../assets/chat.png');
-  			case 'gatsby': return require('../../assets/gatsby.png');
-  			case 'rpg': return require('../../assets/rpg.png');
+			case 'chat': return require('../../assets/chatSmall.png');
+  			case 'gatsby': return require('../../assets/gatsbySmall.png');
+  			case 'rpg': return require('../../assets/rpgSmall.png');
   			default: return "";
 		}
 	}
@@ -109,7 +111,7 @@ class Projects extends Component {
 	      		{projects.map(project => {
 	      			return (
 		      			<SingleProjectWrapper key={project.title}>
-		      				<a href={project.links.website}>
+		      				<a href={project.links[0].address}>
 		      					<Image src={this.pickImage(project.image)} />
 		      				</a>
 		      				<Description>
@@ -123,18 +125,11 @@ class Projects extends Component {
 		      						{project.tags.map(tag => <Tag key={tag}>{tag}</Tag>)}
 		      					</TagsWrapper>
 		      					<ButtonsWrapper>
-		      						<Link href={project.links.website}>
-		      							<StyledButton type="button">Website</StyledButton>
-		      						</Link>
-		      						<Link href={project.links.github}>
-		      							<StyledButton type="button">Github</StyledButton>
-		      						</Link>
-		      						{project.links.githubApi && (
-		      							<Link href={project.links.githubApi}>
-		      								<StyledButton type="button">Github-api</StyledButton>
+		      						{project.links.map(link => 
+		      							<Link href={link.address} key={link.address}>
+		      								<StyledButton type="button">{link.name}</StyledButton>
 		      							</Link>
-		      						)}
-		      						
+		      						)}	
 		      					</ButtonsWrapper>
 		      				</Description>
 		      			</SingleProjectWrapper>

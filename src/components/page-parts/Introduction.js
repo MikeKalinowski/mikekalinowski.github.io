@@ -6,7 +6,7 @@ const IntroductionWrapper = styled.div`
 	background-color: #4e5d6c;
 	background-image: url(${ImgBackground});
 	background-attachment: fixed;
-/*	background-size: cover;*/
+	background-size: cover;
 `
 
 const InsideWrapper = styled.div`
@@ -16,6 +16,7 @@ const InsideWrapper = styled.div`
 	margin: 0 auto;
 	padding: 160px 0px;
 	color: white;
+	text-shadow: 1px 1px 6px black; 
 `
 
 const IntroGroup = styled.div`
@@ -35,8 +36,7 @@ const Text = styled.div`
 
 const LinkToPortfolio = styled.div`
 	position: absolute;
-	bottom: 40px;
-/*	padding-top: 140px;*/
+	bottom: 60px;
 	display: inline-block;
 `
 

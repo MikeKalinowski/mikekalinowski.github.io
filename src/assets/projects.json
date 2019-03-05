@@ -1,32 +1,55 @@
 [{    
     "image": "chat",
     "title": "Chat",
-    "text": "This project was beautiful. It brought the beauty of all the people. All the people",
-    "tags": ["React", "Semantic-ui", "Node.js", "Express.js", "PostgreSQL"],
-    "links": {
-    	"website": "https://mikekalinowski.github.io/chat/",
-    	"github": "https://github.com/MikeKalinowski/chat/",
-        "githubApi": "https://github.com/MikeKalinowski/chat-api/"
-    }
+    "text": "Chat SPA with login functionalities. Custom REST API coded with Node.js. Connects to PostgreSQL database. Real-time messaging implemented with Server Sent Events.",
+    "tags": ["React", "Semantic-ui", "Node.js", "Express.js", "PostgreSQL", "Heroku", "SSE"],
+    "links": [
+        {
+            "name": "Website",
+            "address": "https://mikekalinowski.github.io/chat/"
+        },
+        {
+            "name": "Github",
+            "address": "https://github.com/MikeKalinowski/chat/"
+        },
+        {
+            "name": "Github-Api",
+            "address": "https://github.com/MikeKalinowski/chat-api/"
+        }
+
+    ]
 },
 {    
     "image": "gatsby",
     "title": "Custom designed website",
-    "text": "What a great app, yes yes, great app, best app, best dev",
-    "tags": ["React", "Gatsby", "Styled-components", "Graphql", "Figma"],
-    "links": {
-    	"website": "https://mikekalinowski.github.io/gatsbydemo/",
-    	"github": "https://github.com/MikeKalinowski/gatsbydemo/"
-    }
+    "text": "Responsive website based on custom-made figma design. Connects to Contentful CMS.",
+    "tags": ["React", "Gatsby", "Styled-components", "Graphql", "Contentful CMS", "Figma"],
+    "links": [
+        {
+            "name": "Website",
+            "address": "https://mikekalinowski.github.io/gatsbydemo/"
+        },
+        {
+            "name": "Github",
+            "address": "https://github.com/MikeKalinowski/gatsbydemo/"
+        }
+
+    ]
 },
 {    
     "image": "rpg",
     "title": "RPG Game",
-    "text": "Web browser game, best game!",
+    "text": "Browser RPG game created with vanilla JS.",
     "tags": ["JS", "HTML", "CSS"],
-    "links": {
-    	"website": "https://mikekalinowski.github.io/RPG-game/",
-    	"github": "https://github.com/MikeKalinowski/RPG-game/"
-    }
+    "links": [
+        {
+            "name": "Website",
+            "address": "https://mikekalinowski.github.io/RPG-game/"
+        },
+        {
+            "name": "Github",
+            "address": "https://github.com/MikeKalinowski/RPG-game/"
+        }
+    ]
 }
 ]

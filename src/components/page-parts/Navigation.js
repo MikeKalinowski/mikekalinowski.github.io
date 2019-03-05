@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import styled from 'styled-components'
+import styled from 'styled-components';
+import faceImg from '../../assets/face.png'
 
 const NavigationWrapper = styled.nav`
 	width: 900px;
@@ -16,10 +17,13 @@ const Logo = styled.div`
 `
 
 const Face = styled.div`
-	height: 30px;
-	width: 30px;
+	height: 40px;
+	width: 40px;
 	background-color: #4e5d6c;
 	border-radius: 15px;
+	background-image: url(${faceImg});
+	background-position: center; 
+	background-size: cover;
 `
 
 const TextWrapper = styled.div`
@@ -28,7 +32,6 @@ const TextWrapper = styled.div`
 
 const Title = styled.div`
 	font-size: 17px;
-	
 `
 
 const Text = styled.div`
