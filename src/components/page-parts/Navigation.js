@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
 
-const NavigationWrapper = styled.div`
+const NavigationWrapper = styled.nav`
 	width: 900px;
 	margin: 0 auto;
 	position: relative;

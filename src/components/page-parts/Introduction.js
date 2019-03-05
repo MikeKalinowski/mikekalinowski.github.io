@@ -65,7 +65,7 @@ class Introduction extends Component {
 	      			<a href="#projects">
 		      			<LinkToPortfolio>
 		      				<PortfolioText>
-		      					View Portfolio
+		      					View Projects
 		      				</PortfolioText>
 		      				<Arrow src={require('../../assets/arrow2.png')}></Arrow>
 		      			</LinkToPortfolio>

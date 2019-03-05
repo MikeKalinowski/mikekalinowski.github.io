@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styled from 'styled-components'
+import styled, {css} from 'styled-components'
 import projects from '../../assets/projects.json'
 
 
@@ -42,23 +42,33 @@ const TagsWrapper = styled.div`
 	flex-wrap: wrap;
 `
 
-const Tag = styled.div`
-	padding: 4px 8px;
-	background-color: grey;
-	color: white;
-	border-radius: 12px;
-	margin-right: 8px;
-	margin-bottom: 8px;
+// Mixin made seperately to not repeat styles in Tag and StyledButton
+const buttonishMixin = () => 
+	css`
+		padding: 4px 8px;
+		background-color: grey;
+		color: white;
+		border-radius: 12px;
+		margin-right: 8px;
+		margin-bottom: 8px;
+	`
 
+const Tag = styled.div`
+	${() => buttonishMixin}
 `
 
-const Buttons = styled.div`
+const ButtonsWrapper = styled.div`
 	padding-top: 30px;
 	display: flex;
 	flex-wrap: wrap;
 `
 
-const StyledButton = styled(Tag)`
+const StyledButton = styled.button`
+	font-size: 100%;
+	font-family: inherit;
+	border: none;
+	${() => buttonishMixin};
+	cursor: pointer;
 	background-color: #4e5d6c;
 	letter-spacing: 1px;
 	box-shadow: 0px 1px 0px 0px #a6827e;
@@ -99,8 +109,9 @@ class Projects extends Component {
 	      		{projects.map(project => {
 	      			return (
 		      			<SingleProjectWrapper key={project.title}>
-		      				<Image src={this.pickImage(project.image)}>
-		      				</Image>
+		      				<a href={project.links.website}>
+		      					<Image src={this.pickImage(project.image)} />
+		      				</a>
 		      				<Description>
 		      					<Title>
 		      						{project.title}
@@ -111,14 +122,20 @@ class Projects extends Component {
 		      					<TagsWrapper>
 		      						{project.tags.map(tag => <Tag key={tag}>{tag}</Tag>)}
 		      					</TagsWrapper>
-		      					<Buttons>
+		      					<ButtonsWrapper>
 		      						<Link href={project.links.website}>
-		      							<StyledButton>Website</StyledButton>
+		      							<StyledButton type="button">Website</StyledButton>
 		      						</Link>
 		      						<Link href={project.links.github}>
-		      							<StyledButton>Github</StyledButton>
+		      							<StyledButton type="button">Github</StyledButton>
 		      						</Link>
-		      					</Buttons>
+		      						{project.links.githubApi && (
+		      							<Link href={project.links.githubApi}>
+		      								<StyledButton type="button">Github-api</StyledButton>
+		      							</Link>
+		      						)}
+		      						
+		      					</ButtonsWrapper>
 		      				</Description>
 		      			</SingleProjectWrapper>
 		      	 	) 

@@ -4,18 +4,19 @@
     "text": "This project was beautiful. It brought the beauty of all the people. All the people",
     "tags": ["React", "Semantic-ui", "Node.js", "Express.js", "PostgreSQL"],
     "links": {
-    	"website": "abd",
-    	"github": "aaa"
+    	"website": "https://mikekalinowski.github.io/chat/",
+    	"github": "https://github.com/MikeKalinowski/chat/",
+        "githubApi": "https://github.com/MikeKalinowski/chat-api/"
     }
 },
 {    
     "image": "gatsby",
-    "title": "Website based on design",
+    "title": "Custom designed website",
     "text": "What a great app, yes yes, great app, best app, best dev",
     "tags": ["React", "Gatsby", "Styled-components", "Graphql", "Figma"],
     "links": {
-    	"website": "abd",
-    	"github": "aaa"
+    	"website": "https://mikekalinowski.github.io/gatsbydemo/",
+    	"github": "https://github.com/MikeKalinowski/gatsbydemo/"
     }
 },
 {    
@@ -24,8 +25,8 @@
     "text": "Web browser game, best game!",
     "tags": ["JS", "HTML", "CSS"],
     "links": {
-    	"website": "abd",
-    	"github": "aaa"
+    	"website": "https://mikekalinowski.github.io/RPG-game/",
+    	"github": "https://github.com/MikeKalinowski/RPG-game/"
     }
 }
 ]
