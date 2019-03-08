@@ -71,6 +71,7 @@ const StyledButton = styled.button`
 	${() => buttonishMixin};
 	color: white;
 	cursor: pointer;
+	border: 1px solid #4e5d6c;
 	background-color: #4e5d6c;
 	letter-spacing: 1px;
 	box-shadow: 0px 1px 0px 0px #a6827e;
@@ -126,7 +127,7 @@ class Projects extends Component {
 		      					</TagsWrapper>
 		      					<ButtonsWrapper>
 		      						{project.links.map(link => 
-		      							<Link href={link.address} key={link.address}>
+		      							<Link href={link.address} target="_blank" rel="noopener noreferrer" key={link.address}>
 		      								<StyledButton type="button">{link.name}</StyledButton>
 		      							</Link>
 		      						)}	
