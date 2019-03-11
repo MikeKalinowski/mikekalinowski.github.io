@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import styled, {css} from 'styled-components'
+import styled from 'styled-components'
+
 import projects from '../../assets/projects.json'
+import Button from '../common/Button'
 
 
 const ProjectsWrapper = styled.div`
@@ -15,16 +17,13 @@ const SingleProjectWrapper = styled.div`
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	padding: 130px 0px;
-	border-bottom: 1px solid #e0e0e0;
-	box-shadow: 0px 100px 70px -120px rgba(0,0,0,0.2);
+	padding: 90px 0 60px 0;
 `
 
 const Image = styled.img`
 	width: 400px;
 	height: 225px;
 	background-color: grey;
-	box-shadow: 0px 0px 70px rgba(0,0,0,0.15);
 `
 
 const Description = styled.div`
@@ -32,71 +31,39 @@ const Description = styled.div`
 `
 
 const Title = styled.div`
-	font-size: 30px;
+	font-size: 24px;
+	color: ${props => props.theme.color.title}
 `
 
 const Text = styled.div`
-	padding-top: 10px;
-	line-height: 150%;
+	padding-top: 20px;
+	font-size: 13px;
 `
 
 const TagsWrapper = styled.div`
-	padding-top: 40px;
+	padding-top: 20px;
 	display: flex;
 	flex-wrap: wrap;
 `
 
-// Mixin made seperately to not repeat styles in Tag and StyledButton
-const buttonishMixin = () => 
-	css`
-		padding: 4px 8px;
-		border-radius: 12px;
-		margin-right: 8px;
-		margin-bottom: 8px;
-		
-	`
-
 const Tag = styled.div`
-	${() => buttonishMixin};
-	border: 1px solid #333333;
+	padding: 3px 6px;
+	background: #121212;
+	border-radius: 5px;
+	margin-right: 8px;
+	margin-bottom: 8px;
+	font-size: 12px;
+	font-weight: bold;
 `
 
 const ButtonsWrapper = styled.div`
-	padding-top: 30px;
+	padding-top: 20px;
 	display: flex;
 	flex-wrap: wrap;
 `
 
-const StyledButton = styled.button`
-	font-size: 100%;
-	font-family: inherit;
-	border: none;
-	${() => buttonishMixin};
-	color: white;
-	cursor: pointer;
-	border: 1px solid #4e5d6c;
-	background-color: #4e5d6c;
-	letter-spacing: 1px;
-	box-shadow: 0px 1px 0px 0px #a6827e;
-	transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
-
-	:hover {
-		background: #FFFFFF;
-		border: 1px solid #4e5d6c;
-		transform: translateY(-3px);
-		color: #4e5d6c;
-		box-shadow: 0px 2px 0px 0px #a6827e;
-	}
-
-	:active {
-		transform: translateY(2px);
-		box-shadow: initial;
-	}
-`
-
-const Link = styled.a`
-	text-decoration: none;
-	color: inherit;
+const StyledButton = styled(Button)`
+	margin-right: 24px;
 `
 
 class Projects extends Component {
@@ -131,9 +98,7 @@ class Projects extends Component {
 		      					</TagsWrapper>
 		      					<ButtonsWrapper>
 		      						{project.links.map(link => 
-		      							<Link href={link.address} target="_blank" rel="noopener noreferrer" key={link.address}>
-		      								<StyledButton type="button">{link.name}</StyledButton>
-		      							</Link>
+		      							<StyledButton text={link.name} url={link.address} />
 		      						)}	
 		      					</ButtonsWrapper>
 		      				</Description>

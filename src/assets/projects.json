@@ -5,15 +5,15 @@
     "tags": ["React", "Semantic-ui", "Node.js", "Express.js", "PostgreSQL", "Heroku", "SSE"],
     "links": [
         {
-            "name": "Website",
+            "name": "demo",
             "address": "https://mikekalinowski.github.io/chat/"
         },
         {
-            "name": "Github",
+            "name": "git repo",
             "address": "https://github.com/MikeKalinowski/chat/"
         },
         {
-            "name": "Github-Api",
+            "name": "git repo-api",
             "address": "https://github.com/MikeKalinowski/chat-api/"
         }
 
@@ -26,11 +26,11 @@
     "tags": ["React", "Gatsby", "Styled-components", "Graphql", "Contentful CMS", "Figma"],
     "links": [
         {
-            "name": "Website",
+            "name": "demo",
             "address": "https://mikekalinowski.github.io/gatsbydemo/"
         },
         {
-            "name": "Github",
+            "name": "git repo",
             "address": "https://github.com/MikeKalinowski/gatsbydemo/"
         }
 
@@ -43,11 +43,11 @@
     "tags": ["JS", "HTML", "CSS"],
     "links": [
         {
-            "name": "Website",
+            "name": "demo",
             "address": "https://mikekalinowski.github.io/RPG-game/"
         },
         {
-            "name": "Github",
+            "name": "git repo",
             "address": "https://github.com/MikeKalinowski/RPG-game/"
         }
     ]

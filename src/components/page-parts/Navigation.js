@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import faceImg from '../../assets/face.png'
+
+import Button from '../common/Button'
 
 const NavigationWrapper = styled.nav`
 	width: 900px;
 	margin: 0 auto;
-	position: relative;
+	position: fixed;
 	height: ${props => props.theme.layout.navHeightDesktop};
 	display: flex;
 	align-items: center;
+	background: black;
+	z-index: 10;
 `
 
 const LogoWrapper = styled.div`
@@ -43,27 +46,11 @@ const ListElement = styled.li`
 	float: left;
 `
 
-const Link = styled.a`
-	display: block;
-	width: 110px;
-	height: 100%;
-	line-height: 110px;
-	text-decoration: none;
-	:hover {
-	  background-color: #4e5d6c;
-	}
-`
-
-const UnderlinedText = styled.div`
-	position: absolute;
+const StyledButton = styled(Button)`
+	position: relative;
   	top: 50%;
   	left: 50%;
   	transform: translate(-50%, -50%);
-	color: ${props => props.theme.color.accent}
-	text-align: center;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-	padding-bottom: 5px;
 `
 
 class Navigation extends Component {
@@ -76,7 +63,7 @@ class Navigation extends Component {
       			</LogoWrapper>
       			<Links>
       				<List>
-      					<ListElement><Link href="#contact"><UnderlinedText>contact</UnderlinedText></Link></ListElement>
+      					<ListElement><StyledButton text="contact" url="#contact" /></ListElement>
       				</List>
       			</Links>
       		</NavigationWrapper>

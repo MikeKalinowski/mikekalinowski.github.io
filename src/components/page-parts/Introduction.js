@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const IntroductionWrapper = styled.div`
 	position: relative;
-	padding: 60px 0px 120px 0px;
+	padding: calc(60px + ${props => props.theme.layout.navHeightDesktop}) 0px 120px 0px;
 `
 
 const IntroGroup = styled.div`
@@ -27,7 +27,7 @@ class Introduction extends Component {
 	    return (
 	      	<IntroductionWrapper>
       			<IntroGroup>
-      				<Title>Hi there 👋</Title>
+      				<Title>Hi there <span role="img" aria-label="wave">👋</span></Title>
       				<Text>I'm a frontend developer who worked for several years as Systems Analyst before deciding to pursue my passion for programming.</Text>
       			</IntroGroup>
 	      	</IntroductionWrapper>

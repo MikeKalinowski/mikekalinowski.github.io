@@ -1,18 +1,25 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
+import Button from '../common/Button'
+import TechCard from '../common/TechCard'
+
 const ExpertiseWrapper = styled.div`
 	padding: ${props => props.theme.layout.wrapperPaddingDesktop};
 	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
 `
 
 const LeftWrapper = styled.div`
-	width: 380px;
-	padding-right: 40px
+	width: 60%;
+	padding-right: 40px;
 `
 
 const RightWrapper = styled.div`
-
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
 `
 
 const Title = styled.div`
@@ -24,19 +31,10 @@ const Text = styled.div`
 	font-size: 13px;
 `
 
-const Resume = styled.div`
-	display: inline-block;
-	padding-top: 80px;
-	font-size: 13px;
-	color: ${props => props.theme.color.accent};
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-	padding-bottom: 5px;
+const Resume = styled(Button)`
+	margin-top: 80px;
 `
 
-const A = styled.div`
-
-`
 
 class Expertise extends Component {
   	render() {
@@ -45,10 +43,10 @@ class Expertise extends Component {
 	      		<LeftWrapper>
 	      			<Title>Expertise</Title>
 	      			<Text>Short intro about your experience, more info about your experience, more info about your experience, more info about your experience, </Text>
-	      			<Resume>download resume</Resume>
+	      			<Resume text="download resume" url="#">download resume</Resume>
 	      		</LeftWrapper>
 	      		<RightWrapper>
-	      			TEST
+	      			<TechCard /><TechCard /><TechCard /><TechCard /><TechCard /><TechCard />
 	      		</RightWrapper>
 	      	</ExpertiseWrapper>
 	    );
