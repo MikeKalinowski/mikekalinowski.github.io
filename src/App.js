@@ -1,24 +1,44 @@
 import React, { Component } from 'react';
 import './App.css';
-import styled from 'styled-components'
+import styled, { ThemeProvider } from 'styled-components'
+
+import './components/constant/fonts.css';
+import { Theme } from './components/constant/theme.js';
+
 import Contact from './components/page-parts/Contact'
+import Expertise from './components/page-parts/Expertise'
+import WorkTogether from './components/page-parts/WorkTogether'
 import Projects from './components/page-parts/Projects'
 import Introduction from './components/page-parts/Introduction'
 import Navigation from './components/page-parts/Navigation'
 
 const MainWrapper = styled.div`
-  
+  width: ${props => props.theme.layout.contentWidthDesktop};
+  position: relative;
+  margin: 0 auto;
+
+  font-family: Roboto Mono;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  font-size: 16px;
+  letter-spacing: -0.04em;
+  color: ${props => props.theme.color.text};
 `
 
 class App extends Component {
   render() {
     return (
-      <MainWrapper>
-        <Navigation />
-        <Introduction />
-        <Projects />
-        <Contact />
-      </MainWrapper>
+      <ThemeProvider theme={Theme}>
+        <MainWrapper>
+          <Navigation />
+          <Introduction />
+          <Expertise />
+          <WorkTogether />
+          <Projects />
+          <Contact />
+        </MainWrapper>
+      </ThemeProvider>
     );
   }
 }

@@ -1,22 +1,9 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import ImgBackground from '../../assets/background.jpg'
 
 const IntroductionWrapper = styled.div`
-	background-color: #4e5d6c;
-	background-image: url(${ImgBackground});
-	background-attachment: fixed;
-	background-size: cover;
-`
-
-const InsideWrapper = styled.div`
 	position: relative;
-	width: 900px;
-	height: calc(100vh - 90px);
-	margin: 0 auto;
-	padding: 160px 0px;
-	color: white;
-	text-shadow: 1px 1px 6px black; 
+	padding: 60px 0px 120px 0px;
 `
 
 const IntroGroup = styled.div`
@@ -24,53 +11,25 @@ const IntroGroup = styled.div`
 `
 
 const Title = styled.div`
-	font-style: "Open sans";
-	font-size: 36px;
+	font-size: 32px;
+	color: white;
 `
 
 const Text = styled.div`
 	padding-top: 40px;
-	margin: 0 auto;
-	font-size: 22px;
-`
-
-const LinkToPortfolio = styled.div`
-	position: absolute;
-	bottom: 60px;
-	display: inline-block;
-`
-
-const Arrow = styled.img`
-	padding-top: 4px;
-	display: block;
-	margin: 0 auto;
-`
-
-const PortfolioText = styled.div`
-	font-size: 14px;
-	font-family: Open Sans;
+	font-size: 32px;
 	color: white;
 `
+
 
 class Introduction extends Component {
   	render() {
 	    return (
-	      	<IntroductionWrapper id="about">
-	      		<InsideWrapper>
-	      			<IntroGroup>
-	      				
-	      				<Title>Web developer</Title>
-	      				<Text>Hello there, I'm a web developer who worked for several years as Systems Analyst before deciding to pursue my passion in programming.</Text>
-	      			</IntroGroup>
-	      			<a href="#projects">
-		      			<LinkToPortfolio>
-		      				<PortfolioText>
-		      					View Projects
-		      				</PortfolioText>
-		      				<Arrow src={require('../../assets/arrow2.png')}></Arrow>
-		      			</LinkToPortfolio>
-	      			</a>
-	      		</InsideWrapper>
+	      	<IntroductionWrapper>
+      			<IntroGroup>
+      				<Title>Hi there 👋</Title>
+      				<Text>I'm a frontend developer who worked for several years as Systems Analyst before deciding to pursue my passion for programming.</Text>
+      			</IntroGroup>
 	      	</IntroductionWrapper>
 	    );
   	}

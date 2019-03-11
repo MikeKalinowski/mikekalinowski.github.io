@@ -4,8 +4,11 @@ import projects from '../../assets/projects.json'
 
 
 const ProjectsWrapper = styled.div`
-	width: 900px;
-	margin: 0 auto;
+	padding: ${props => props.theme.layout.wrapperPaddingDesktop};
+`
+
+const MainTitle = styled.div`
+	color: ${props => props.theme.color.title}
 `
 
 const SingleProjectWrapper = styled.div`
@@ -109,6 +112,7 @@ class Projects extends Component {
 	render() {
 	    return (
 	      	<ProjectsWrapper id="projects">
+	      		<MainTitle>Projects</MainTitle>
 	      		{projects.map(project => {
 	      			return (
 		      			<SingleProjectWrapper key={project.title}>
