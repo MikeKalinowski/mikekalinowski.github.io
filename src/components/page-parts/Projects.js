@@ -98,7 +98,7 @@ class Projects extends Component {
 		      					</TagsWrapper>
 		      					<ButtonsWrapper>
 		      						{project.links.map(link => 
-		      							<StyledButton text={link.name} url={link.address} />
+		      							<StyledButton text={link.name} url={link.address} key={link.name}/>
 		      						)}	
 		      					</ButtonsWrapper>
 		      				</Description>

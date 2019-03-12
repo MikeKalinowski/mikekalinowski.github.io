@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import RenderLogo from './RenderLogo'
+
 const TechCardWrapper = styled.div`
 	position: relative;
 	width: 160px;
@@ -9,19 +11,23 @@ const TechCardWrapper = styled.div`
 	margin: 4px;
 `
 
-const Logo = styled.div`
+const Logo = styled.svg`
 	position: relative;
-	width: 40px;
-	height: 40px;
+	width: 50px;
+	height: 50px;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	background: black;
+	
 `
-const TechCard = ({ className }) => {
+
+
+
+const TechCard = ({ logo }) => {
 	return(
 		<TechCardWrapper>
-			<Logo>
+			<Logo viewBox="0 0 50 50">
+				<RenderLogo logo={logo}/>
 			</Logo>
 		</TechCardWrapper>
 	)

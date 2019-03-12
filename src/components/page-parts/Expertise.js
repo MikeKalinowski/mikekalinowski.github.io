@@ -36,7 +36,14 @@ const Resume = styled(Button)`
 `
 
 
+
 class Expertise extends Component {
+	constructor(props) {
+		super(props)
+
+		this.logos = ["js", "react", "gatsby", "git", "webpack", "graphql"]
+	}
+
   	render() {
 	    return (
 	      	<ExpertiseWrapper>
@@ -46,7 +53,7 @@ class Expertise extends Component {
 	      			<Resume text="download resume" url="#">download resume</Resume>
 	      		</LeftWrapper>
 	      		<RightWrapper>
-	      			<TechCard /><TechCard /><TechCard /><TechCard /><TechCard /><TechCard />
+	      			{this.logos.map(logo => <TechCard logo={logo} key={logo}/>)}	      			
 	      		</RightWrapper>
 	      	</ExpertiseWrapper>
 	    );

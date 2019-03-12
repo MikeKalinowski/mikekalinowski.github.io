@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const StyledButton = styled.button`
+	position: relative;
 	background: none;
 	border: none;
 	padding: 0;
@@ -11,14 +12,30 @@ const StyledButton = styled.button`
 	letter-spacing: -0.04em;
 	font-size: 13px;
 	color: ${props => props.theme.color.accent};
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
 	padding-bottom: 5px;
+	transition: all 200ms ease;
+
+	// Effect by Emil Kowalski - https://emilkowalski.github.io/css-effects-snippets/
+	:after {
+	    content: '';
+	    position: absolute;
+	    height: 1px;
+	    width: 100%;
+	    left: 0;
+	    bottom: 0;
+	    background: ${props => props.theme.color.accent};
+	    transition: all 200ms ease;
+	}
+
+	:hover:after {
+	    opacity: 0;
+	    transform: translateY(3px);
+	}
 
 	:hover {
 		color: white;
-		background-color: ${props => props.theme.color.text};
 	}
+
 `
 
 const Button = ({ text, url, className }) => {
