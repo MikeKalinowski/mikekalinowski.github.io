@@ -4,13 +4,17 @@ import styled from 'styled-components';
 import Button from '../common/Button'
 
 const NavigationWrapper = styled.nav`
-	width: 900px;
 	margin: 0 auto;
-	height: ${props => props.theme.layout.navHeightDesktop};
+	height: ${props => props.theme.layout.navHeightMobile};
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 	background: black;
 	z-index: 10;
+
+	@media ${props => props.theme.layout.tablet} {
+		height: ${props => props.theme.layout.navHeightDesktop};
+  	}
 `
 
 const LogoWrapper = styled.div`
@@ -24,11 +28,19 @@ const Logo = styled.div`
 `
 
 const Text = styled.div`
-	padding-left: 40px;
+	padding-left: 20px;
+	display: none;
+
+	@media (min-width: 280px) { /*Need to display:none or the design won't be pretty :(*/
+	  display: block;
+	}
+
+	@media (min-width: 350px) {
+	  padding-left: 40px;
+	}
 `
 
 const Links = styled.div`
-	position: absolute;
 	right: 0px;
 	height: 100%;
 `
@@ -48,8 +60,7 @@ const ListElement = styled.li`
 const StyledButton = styled(Button)`
 	position: relative;
   	top: 50%;
-  	left: 50%;
-  	transform: translate(-50%, -50%);
+  	transform: translate(0, -50%);
 `
 
 class Navigation extends Component {

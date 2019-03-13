@@ -5,7 +5,11 @@ import features from '../../assets/features.json'
 import FeatureCard from '../common/FeatureCard'
 
 const WorkTogetherWrapper = styled.div`
-	padding: ${props => props.theme.layout.wrapperPaddingDesktop};
+	padding-top: 80px;
+
+	@media ${props => props.theme.layout.tablet} {
+		padding: ${props => props.theme.layout.wrapperPaddingDesktop};
+  	}
 `
 
 const Title = styled.div`
@@ -13,9 +17,13 @@ const Title = styled.div`
 `
 
 const FeaturesWrapper = styled.div`
-	padding-top: 60px;
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
+
+	@media ${props => props.theme.layout.laptop} {
+		justify-content: space-between;
+  	}
 `
 
 class WorkTogether extends Component {

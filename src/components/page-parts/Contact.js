@@ -6,10 +6,8 @@ import Button from '../common/Button'
 const ContactWrapper = styled.div`
 `
 
-
-
 const ContactTopWrapper = styled.div`
-	padding: 80px;
+	padding: 80px 0;
   border-top: 1px solid #1A1A1A;
   border-bottom: 1px solid #1A1A1A;
 `
@@ -23,17 +21,30 @@ const ContactBottomWrapper = styled.div`
 
 const Title = styled.div`
   color: ${props => props.theme.color.title};
-  font-size: 24px;
+  font-size: 20px;
   font-weight: normal;
+
+  @media ${props => props.theme.layout.tablet} {
+    font-size: 24px;
+  }
 `
 
 const EmailLink = styled(Button)`
-  font-size: 24px;
+  font-size: 20px;
   font-weight: normal;
+
+  @media ${props => props.theme.layout.tablet} {
+    font-size: 24px;
+  }
 `
 
 const Logo = styled.div`
   color: ${props => props.theme.color.title};
+  display: none;
+
+  @media (min-width: 350px) { /*Need to display:none or the design won't be pretty :(*/
+    display: block;
+  }
 `
 
 const RightGroupWrapper = styled.div`
@@ -49,23 +60,33 @@ const DesignedLink = styled.a`
   color: inherit;
   text-decoration: none;
   font-size: 13px;
-  padding-right: 30px;
+  padding-right: 10px;
   border-right: 1px solid #1A1A1A;
   :hover {
     color: ${props => props.theme.color.accent};
   };
+
+  @media ${props => props.theme.layout.tablet} {
+    padding-right: 30px;
+  }
 `
 
 const LinksGroup = styled.div`
   display: flex;
-  padding-left: 10px;
+  @media ${props => props.theme.layout.tablet} {
+    padding-left: 10px;
+  }
 `
 
 const Link = styled.a`
-  padding-left: 20px;
+  padding-left: 10px;
   font-size: 13px;
   color: inherit;
   text-decoration: none;
+
+  @media ${props => props.theme.layout.tablet} {
+    padding-left: 20px;
+  }
 
   :hover {
     color: ${props => props.theme.color.accent}

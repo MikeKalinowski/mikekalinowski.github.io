@@ -4,9 +4,17 @@ import styled from 'styled-components'
 import RenderImage from '../common/RenderImage'
 
 const FeatureCardWrapper = styled.div`
-	width: 160px; 
-	margin-right: 65px;
+	width: 220px; 
+	margin: 0 25px;
+	padding-top: 40px;
+	text-align: center;
 
+	@media ${props => props.theme.layout.tablet} {
+		margin: 0 15px
+		padding-top: 60px;
+		width: 160px;
+		text-align: initial;
+  	}
 `
 
 const Image = styled.svg`

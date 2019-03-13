@@ -5,21 +5,37 @@ import Button from '../common/Button'
 import TechCard from '../common/TechCard'
 
 const ExpertiseWrapper = styled.div`
-	padding: ${props => props.theme.layout.wrapperPaddingDesktop};
+	padding-top: 80px;
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
+	flex-wrap: wrap;
+
+	@media ${props => props.theme.layout.tablet} {
+		flex-wrap: initial;
+		padding: ${props => props.theme.layout.wrapperPaddingDesktop};
+  	}
 `
 
 const LeftWrapper = styled.div`
-	width: 60%;
-	padding-right: 40px;
+	width: 75%;
+	
+	@media ${props => props.theme.layout.tablet} {
+		padding-right: 40px;
+		width: 60%;
+  	}
 `
 
 const RightWrapper = styled.div`
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: flex-end;
+	justify-content: center;
+	padding-top: 60px;
+
+	@media ${props => props.theme.layout.tablet} {
+		padding-top: 0px;
+		justify-content: flex-end;
+  	}
 `
 
 const Title = styled.div`
@@ -32,7 +48,11 @@ const Text = styled.div`
 `
 
 const Resume = styled(Button)`
-	margin-top: 80px;
+	margin-top: 40px;
+
+	@media ${props => props.theme.layout.tablet} {
+		margin-top: 80px;
+  	}
 `
 
 

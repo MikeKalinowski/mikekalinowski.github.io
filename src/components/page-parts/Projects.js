@@ -6,7 +6,11 @@ import Button from '../common/Button'
 
 
 const ProjectsWrapper = styled.div`
-	padding: ${props => props.theme.layout.wrapperPaddingDesktop};
+	padding: 80px 0 40px;
+
+	@media ${props => props.theme.layout.tablet} {
+		padding: ${props => props.theme.layout.wrapperPaddingDesktop};
+  	}
 
 	// Reversing order of image and text in projects for every second project. 2n+1 says to start by omitting the MainTitle div
 	div:nth-child(2n+1) {
@@ -15,14 +19,50 @@ const ProjectsWrapper = styled.div`
 
 	// Offseting images
 	#image0 {
-		transform: translate3d(53px, 48px, 0);
+		transform: translate3d(26px, 30px, 0);
+
+		@media (min-width: 350px) {
+			transform: translate3d(53px, 48px, 0);
+  		}
 	}
 	#image1 {
-		transform: translate3d(-47px, 88px, 0);
-	}
+		transform: translate3d(-23px, 54px, 0);
+
+		@media (min-width: 350px) {
+			transform: translate3d(-47px, 88px, 0);
+  		}
+}
 	#image2 {
-		transform: translate3d(60px, 110px, 0);
+		transform: translate3d(30px, 65px, 0);
+
+		@media (min-width: 350px) {
+			transform: translate3d(60px, 110px, 0);
+  		}
 	}
+
+	// Adding padding according to image move
+	#correction0 {
+		margin: 0 26px 30px 0;
+
+		@media (min-width: 350px) {
+			margin: 0 53px 48px 0;
+  		}
+	}
+	#correction1 {
+		margin: 0 0 54px 23px;
+
+		@media (min-width: 350px) {
+			margin: 0 0 88px 47px;
+  		}
+	}
+	#correction2 {
+		margin: 0 30px 65px 0;
+
+		@media (min-width: 350px) {
+			margin: 0 60px 110px 0;
+  		}
+	}
+
 `
 
 const MainTitle = styled.div`
@@ -33,7 +73,11 @@ const SingleProjectWrapper = styled.div`
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	padding: 90px 0 120px 0;
+	padding: 60px 0 40px;
+
+	@media ${props => props.theme.layout.tablet} {
+		padding: 90px 0 90px 0;
+  	}
 `
 
 const ImagesWrapper = styled.div`
@@ -55,6 +99,10 @@ const Image1 = styled.img`
 	border-radius: 10px;
 	opacity: 0.3;
 	transition: all 0.7s ease-out;
+	width: 65vw
+	@media (min-width: 768px) {
+		width: initial;
+  	}
 `
 
 const Image2 = styled.img`
@@ -64,10 +112,19 @@ const Image2 = styled.img`
 	background-color: grey;
 	border-radius: 10px;
 	transition: all 0.7s ease-out;
+	width: 65vw
+	@media (min-width: 768px) {
+		width: initial;
+  	}
 `
 
 const Description = styled.div`
 	width: 360px;
+	padding-top: 40px;
+
+	@media ${props => props.theme.layout.tablet} {
+		padding-top: 0;
+  	}
 `
 
 const Title = styled.div`
@@ -84,6 +141,7 @@ const TagsWrapper = styled.div`
 	padding-top: 20px;
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: flex-end;
 `
 
 const Tag = styled.div`
@@ -128,11 +186,11 @@ class Projects extends Component {
 		      			<SingleProjectWrapper key={project.title} id="projectWrapper">
 		      				<a href={project.links[0].address} target="_blank" rel="noopener noreferrer">
 		      					<ImagesWrapper>
-		      						<Image1 src={this.pickImage(project.image1)} />
-		      						<Image2 src={this.pickImage(project.image2)} id={"image" + index}/> {/*id is added to offset image*/}					
+		      						<Image1 src={this.pickImage(project.image1)} id={"correction" + index}/> {/*id is added to correct Image2 translation with padding*/}
+		      						<Image2 src={this.pickImage(project.image2)} id={"image" + index}/> {/*id is added to translate image*/}					
 		      					</ImagesWrapper>
 		      				</a>
-		      				<Description>
+		      				<Description> 
 		      					<Title>
 		      						{project.title}
 		      					</Title>
