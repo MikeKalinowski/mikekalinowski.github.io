@@ -15,7 +15,7 @@ const IntroGroup = styled.div`
 `
 
 const Title = styled.div`
-	font-size: 26px;
+	font-size: 20px;
 	color: white;
 
 	@media ${props => props.theme.layout.tablet} {
@@ -24,11 +24,12 @@ const Title = styled.div`
 `
 
 const Text = styled.div`
-	padding-top: 40px;
-	font-size: 26px;
+	padding-top: 20px;
+	font-size: 20px;
 	color: white;
 
 	@media ${props => props.theme.layout.tablet} {
+		padding-top: 32px;
 		font-size: 32px;
   	}
 `

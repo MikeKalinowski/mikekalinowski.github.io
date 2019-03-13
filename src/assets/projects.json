@@ -24,7 +24,7 @@
     "image1": "gatsby1",
     "image2": "gatsby2",
     "title": "Custom designed website",
-    "text": "Responsive website based on custom-made figma design. Connects to Contentful CMS.",
+    "text": "Responsive website based on custom-made figma design. Made with React and Styled Components. Connects to Contentful CMS and uses GraphQL for querying.",
     "tags": ["React", "Gatsby", "Styled-components", "Graphql", "Contentful CMS", "Figma"],
     "links": [
         {
@@ -42,7 +42,7 @@
     "image1": "rpg1",
     "image2": "rpg2",
     "title": "RPG Game",
-    "text": "Browser RPG game created with vanilla JS.",
+    "text": "Browser RPG game created with vanilla JS. Takes players on an adventure through different locations full of monsters and equipment.",
     "tags": ["JS", "HTML", "CSS"],
     "links": [
         {
