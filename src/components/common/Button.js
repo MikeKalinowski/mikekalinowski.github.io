@@ -38,9 +38,9 @@ const StyledButton = styled.button`
 
 `
 
-const Button = ({ text, url, className }) => {
+const Button = ({ text, url, className, leadsOutside }) => {
 	return(
-		<a href={url}>
+		<a href={url} target={leadsOutside ? "_blank" : ""} rel={leadsOutside ? "noopener noreferrer" : ""}>
 			<StyledButton className={className}>
 				{text}
 			</StyledButton>

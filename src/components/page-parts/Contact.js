@@ -41,12 +41,14 @@ const RightGroupWrapper = styled.div`
   display: flex;
 `
 
+// This div is needed so that border-right in child will look good
 const DesignedBy = styled.div`
 `
 
 const DesignedLink = styled.a`
   color: inherit;
   text-decoration: none;
+  font-size: 13px;
   padding-right: 30px;
   border-right: 1px solid #1A1A1A;
   :hover {
@@ -57,6 +59,17 @@ const DesignedLink = styled.a`
 const LinksGroup = styled.div`
   display: flex;
   padding-left: 10px;
+`
+
+const Link = styled.a`
+  padding-left: 20px;
+  font-size: 13px;
+  color: inherit;
+  text-decoration: none;
+
+  :hover {
+    color: ${props => props.theme.color.accent}
+  }
 `
 
 class Contact extends Component {
@@ -73,7 +86,10 @@ class Contact extends Component {
               <Logo>devMike</Logo>
               <RightGroupWrapper>
                 <DesignedBy><DesignedLink href="http://kalin.pl" target="_blank" rel="noopener noreferrer">dsgn by kln</DesignedLink></DesignedBy>
-                <LinksGroup>Links go here</LinksGroup>
+                <LinksGroup>
+                  <Link href="https://www.linkedin.com/in/micha%C5%82-kalinowski-3b354715a/" target="_blank" rel="noopener noreferrer">linkedin</Link>
+                  <Link href="https://github.com/MikeKalinowski/" target="_blank" rel="noopener noreferrer">github</Link>
+                </LinksGroup>
               </RightGroupWrapper>
             </ContactBottomWrapper>
       		</ContactWrapper>

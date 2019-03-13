@@ -18,7 +18,6 @@ const Logo = styled.svg`
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	
 `
 
 
@@ -26,7 +25,7 @@ const Logo = styled.svg`
 const TechCard = ({ logo }) => {
 	return(
 		<TechCardWrapper>
-			<Logo viewBox="0 0 50 50">
+			<Logo viewBox="0 0 46 46">
 				<RenderLogo logo={logo}/>
 			</Logo>
 		</TechCardWrapper>

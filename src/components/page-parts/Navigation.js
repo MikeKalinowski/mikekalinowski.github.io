@@ -6,7 +6,6 @@ import Button from '../common/Button'
 const NavigationWrapper = styled.nav`
 	width: 900px;
 	margin: 0 auto;
-	position: fixed;
 	height: ${props => props.theme.layout.navHeightDesktop};
 	display: flex;
 	align-items: center;

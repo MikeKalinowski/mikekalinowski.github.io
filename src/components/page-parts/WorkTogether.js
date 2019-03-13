@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
+import features from '../../assets/features.json'
+import FeatureCard from '../common/FeatureCard'
+
 const WorkTogetherWrapper = styled.div`
 	padding: ${props => props.theme.layout.wrapperPaddingDesktop};
 `
@@ -21,7 +24,12 @@ class WorkTogether extends Component {
 	      	<WorkTogetherWrapper>
 	      		<Title>Why should we work together?</Title>
 	      		<FeaturesWrapper>
-	      			Features go Here
+	      			{features.map(feature => {
+	      				return(
+	      					<FeatureCard title={feature.title} text={feature.text} key={feature.title}/>
+	      				)
+	      			})}
+	      			
 	      		</FeaturesWrapper>
 	      	</WorkTogetherWrapper>
 	    );

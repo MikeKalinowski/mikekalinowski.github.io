@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const IntroductionWrapper = styled.div`
 	position: relative;
-	padding: calc(60px + ${props => props.theme.layout.navHeightDesktop}) 0px 120px 0px;
+	padding: 60px 0px 120px 0px;
 `
 
 const IntroGroup = styled.div`
