@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
+import Rellax from 'rellax';
 
 import projects from '../../assets/projects.json'
 import Button from '../common/Button'
@@ -173,6 +174,10 @@ const StyledButton = styled(Button)`
 `
 
 class Projects extends Component {
+	componentDidMount() {
+	    this.rellaxProj = new Rellax('.rellaxProj')
+	}
+
 	pickImage = (image) => {
 		switch (image) {
 			case 'chat1': return require('../../assets/chat1.png');
@@ -197,7 +202,7 @@ class Projects extends Component {
 		      					target="_blank" 
 		      					rel="noopener noreferrer"
 		      				>
-		      					<ImagesWrapper>
+		      					<ImagesWrapper className="rellaxProj" data-rellax-speed="-1" data-rellax-percentage="0.5">
 		      						<Image1 
 		      							src={this.pickImage(project.image1)} 
 		      							id={'correction' + index}

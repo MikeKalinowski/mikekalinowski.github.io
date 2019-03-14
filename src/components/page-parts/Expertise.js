@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import Rellax from 'rellax';
 
 import Button from '../common/Button'
 import TechCard from '../common/TechCard'
@@ -67,6 +68,10 @@ class Expertise extends Component {
 		this.logos = ['js', 'react', 'gatsby', 'git', 'webpack', 'graphql']
 	}
 
+	componentDidMount() {
+	    this.rellax = new Rellax('.rellax')
+	}
+
   	render() {
 	    return (
 	      	<ExpertiseWrapper>
@@ -79,7 +84,7 @@ class Expertise extends Component {
 	      				download resume
 	      			</Resume>
 	      		</LeftWrapper>
-	      		<RightWrapper>
+	      		<RightWrapper className="rellax" data-rellax-speed="-1.5" data-rellax-percentage="0.4">
 	      			{this.logos.map(logo => <TechCard logo={logo} key={logo}/>)}	      			
 	      		</RightWrapper>
 	      	</ExpertiseWrapper>
