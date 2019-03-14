@@ -89,7 +89,9 @@ const ImagesWrapper = styled.div`
 	:hover img:nth-child(1) {
 		opacity: 1;
 		z-index: 2;
+		transform: scale(1.05, 1.05);
 	}
+	
 	:hover img:nth-child(2) {
 		opacity: 0.3;
 		z-index: 1;
@@ -101,7 +103,7 @@ const Image1 = styled.img`
 	background-color: grey;
 	border-radius: 10px;
 	opacity: 0.3;
-	transition: all 0.7s ease-out;
+	transition: all 0.5s ease-out;
 	width: 65vw
 	max-width: 400px;
 	@media (min-width: 768px) {
@@ -115,7 +117,7 @@ const Image2 = styled.img`
 	left: 0;
 	background-color: grey;
 	border-radius: 10px;
-	transition: all 0.7s ease-out;
+	transition: all 0.5s ease-out;
 	width: 65vw
 	max-width: 340px;
 	max-height: 220px;
