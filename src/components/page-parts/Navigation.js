@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import Button from '../common/Button'
 
-const NavigationWrapper = styled.nav`
+const NavigationWrapper = styled.header`
 	margin: 0 auto;
 	height: ${props => props.theme.layout.navHeightMobile};
 	display: flex;
@@ -40,7 +40,7 @@ const Text = styled.div`
 	}
 `
 
-const Links = styled.div`
+const Links = styled.nav`
 	right: 0px;
 	height: 100%;
 `
@@ -73,7 +73,9 @@ class Navigation extends Component {
       			</LogoWrapper>
       			<Links>
       				<List>
-      					<ListElement><StyledButton text="contact" url="#contact" /></ListElement>
+      					<ListElement>
+      						<StyledButton text="contact" url="#contact" />
+      					</ListElement>
       				</List>
       			</Links>
       		</NavigationWrapper>

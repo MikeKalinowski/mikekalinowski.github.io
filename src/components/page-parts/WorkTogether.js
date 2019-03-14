@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import features from '../../assets/features.json'
 import FeatureCard from '../common/FeatureCard'
 
-const WorkTogetherWrapper = styled.div`
+const WorkTogetherWrapper = styled.section`
 	padding-top: 80px;
 
 	@media ${props => props.theme.layout.tablet} {
@@ -12,7 +12,10 @@ const WorkTogetherWrapper = styled.div`
   	}
 `
 
-const Title = styled.div`
+const Title = styled.h1`
+	font-size: 1em;
+  	margin: 0;
+ 	font-weight: 500;
 	color: ${props => props.theme.color.title};
 `
 
@@ -34,7 +37,11 @@ class WorkTogether extends Component {
 	      		<FeaturesWrapper>
 	      			{features.map(feature => {
 	      				return(
-	      					<FeatureCard title={feature.title} text={feature.text} key={feature.title}/>
+	      					<FeatureCard 
+	      						title={feature.title} 
+	      						text={feature.text} 
+	      						key={feature.title}
+	      					/>
 	      				)
 	      			})}
 	      			

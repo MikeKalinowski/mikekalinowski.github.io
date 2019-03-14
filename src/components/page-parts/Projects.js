@@ -5,7 +5,7 @@ import projects from '../../assets/projects.json'
 import Button from '../common/Button'
 
 
-const ProjectsWrapper = styled.div`
+const ProjectsWrapper = styled.section`
 	padding: 80px 0 40px;
 
 	@media ${props => props.theme.layout.tablet} {
@@ -65,7 +65,10 @@ const ProjectsWrapper = styled.div`
 
 `
 
-const MainTitle = styled.div`
+const MainTitle = styled.h1`
+	font-size: 1em;
+  	margin: 0;
+ 	font-weight: 500;
 	color: ${props => props.theme.color.title};
 `
 
@@ -100,6 +103,7 @@ const Image1 = styled.img`
 	opacity: 0.3;
 	transition: all 0.7s ease-out;
 	width: 65vw
+	max-width: 400px;
 	@media (min-width: 768px) {
 		width: initial;
   	}
@@ -113,6 +117,8 @@ const Image2 = styled.img`
 	border-radius: 10px;
 	transition: all 0.7s ease-out;
 	width: 65vw
+	max-width: 340px;
+	max-height: 220px;
 	@media (min-width: 768px) {
 		width: initial;
   	}
@@ -173,7 +179,7 @@ class Projects extends Component {
   			case 'gatsby2': return require('../../assets/gatsby2.png');
   			case 'rpg1': return require('../../assets/rpg1.png');
   			case 'rpg2': return require('../../assets/rpg2.png');
-  			default: return "";
+  			default: return '';
 		}
 	}
 
@@ -184,10 +190,22 @@ class Projects extends Component {
 	      		{projects.map((project, index) => {
 	      			return (
 		      			<SingleProjectWrapper key={project.title} id="projectWrapper">
-		      				<a href={project.links[0].address} target="_blank" rel="noopener noreferrer">
+		      				<a 
+		      					href={project.links[0].address} 
+		      					target="_blank" 
+		      					rel="noopener noreferrer"
+		      				>
 		      					<ImagesWrapper>
-		      						<Image1 src={this.pickImage(project.image1)} id={"correction" + index}/> {/*id is added to correct Image2 translation with padding*/}
-		      						<Image2 src={this.pickImage(project.image2)} id={"image" + index}/> {/*id is added to translate image*/}					
+		      						<Image1 
+		      							src={this.pickImage(project.image1)} 
+		      							id={'correction' + index}
+		      							role="presentation"
+		      						/>  {/*id is added to correct Image2 translation with padding*/}
+		      						<Image2 
+		      							src={this.pickImage(project.image2)} 
+		      							id={'image' + index}
+		      							role="presentation"
+		      						/> 	{/*id is added to translate image*/}
 		      					</ImagesWrapper>
 		      				</a>
 		      				<Description> 
@@ -202,7 +220,12 @@ class Projects extends Component {
 		      					</TagsWrapper>
 		      					<ButtonsWrapper>
 		      						{project.links.map(link => 
-		      							<StyledButton text={link.name} url={link.address} leadsOutside={true} key={link.name}/>
+		      							<StyledButton 
+		      								text={link.name} 
+		      								url={link.address} 
+		      								leadsOutside={true} 
+		      								key={link.name}
+		      							/>
 		      						)}	
 		      					</ButtonsWrapper>
 		      				</Description>

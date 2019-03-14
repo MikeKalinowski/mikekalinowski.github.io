@@ -3,13 +3,14 @@ import styled from 'styled-components';
 
 import Button from '../common/Button'
 
-const ContactWrapper = styled.div`
+const ContactWrapper = styled.footer`
 `
 
-const ContactTopWrapper = styled.div`
+const ContactTopWrapper = styled.address`
 	padding: 80px 0;
   border-top: 1px solid #1A1A1A;
   border-bottom: 1px solid #1A1A1A;
+  font-style: normal;
 `
 
 const ContactBottomWrapper = styled.div`
@@ -71,8 +72,10 @@ const DesignedLink = styled.a`
   }
 `
 
-const LinksGroup = styled.div`
+const LinksGroup = styled.address`
   display: flex;
+  font-style: normal;
+
   @media ${props => props.theme.layout.tablet} {
     padding-left: 10px;
   }
@@ -106,10 +109,30 @@ class Contact extends Component {
             <ContactBottomWrapper>
               <Logo>devMike</Logo>
               <RightGroupWrapper>
-                <DesignedBy><DesignedLink href="http://kalin.pl" target="_blank" rel="noopener noreferrer">dsgn by kln</DesignedLink></DesignedBy>
+                <DesignedBy>
+                  <DesignedLink 
+                    href="http://kalin.pl" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    dsgn by kln
+                  </DesignedLink>
+                </DesignedBy>
                 <LinksGroup>
-                  <Link href="https://www.linkedin.com/in/micha%C5%82-kalinowski-3b354715a/" target="_blank" rel="noopener noreferrer">linkedin</Link>
-                  <Link href="https://github.com/MikeKalinowski/" target="_blank" rel="noopener noreferrer">github</Link>
+                  <Link 
+                    href="https://www.linkedin.com/in/micha%C5%82-kalinowski-3b354715a/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    linkedin
+                  </Link>
+                  <Link 
+                    href="https://github.com/MikeKalinowski/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                  github
+                  </Link>
                 </LinksGroup>
               </RightGroupWrapper>
             </ContactBottomWrapper>

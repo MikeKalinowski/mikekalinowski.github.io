@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Button from '../common/Button'
 import TechCard from '../common/TechCard'
 
-const ExpertiseWrapper = styled.div`
+const ExpertiseWrapper = styled.section`
 	padding-top: 80px;
 	display: flex;
 	justify-content: space-between;
@@ -38,7 +38,10 @@ const RightWrapper = styled.div`
   	}
 `
 
-const Title = styled.div`
+const Title = styled.h1`
+	font-size: 1em;
+  	margin: 0;
+ 	font-weight: 500;
 	color: ${props => props.theme.color.title};
 `
 
@@ -61,7 +64,7 @@ class Expertise extends Component {
 	constructor(props) {
 		super(props)
 
-		this.logos = ["js", "react", "gatsby", "git", "webpack", "graphql"]
+		this.logos = ['js', 'react', 'gatsby', 'git', 'webpack', 'graphql']
 	}
 
   	render() {
@@ -69,8 +72,12 @@ class Expertise extends Component {
 	      	<ExpertiseWrapper>
 	      		<LeftWrapper>
 	      			<Title>Expertise</Title>
-	      			<Text>Short intro about your experience, more info about your experience, more info about your experience, more info about your experience, </Text>
-	      			<Resume text="download resume" url="#">download resume</Resume>
+	      			<Text>
+	      				Short intro about your experience, more info about your experience, more info about your experience, more info about your experience, 
+	      			</Text>
+	      			<Resume text="download resume" url="#">
+	      				download resume
+	      			</Resume>
 	      		</LeftWrapper>
 	      		<RightWrapper>
 	      			{this.logos.map(logo => <TechCard logo={logo} key={logo}/>)}	      			

@@ -2,7 +2,7 @@ import React from 'react'
 
 const RenderImage = ({ image }) => {
 	switch(image) {
-	  	case "Passion":
+	  	case 'Passion':
 		  	return(
 		  		<g>
 		  			<rect x="7" y="7" width="66" height="66" rx="19" stroke="#FF776E" strokeWidth="2"/>
@@ -10,7 +10,7 @@ const RenderImage = ({ image }) => {
                     <rect opacity="0.5" x="-6.58566" y="40" width="65.8822" height="65.8822" rx="19" transform="rotate(-45 -6.58566 40)" stroke="#FF776E" strokeWidth="2"/>
     	  		</g>
 		  	)
-	  	case "Agile":
+	  	case 'Agile':
 		  	return(
 			  	<g>
 			  		<path d="M40.0412 75.9707C38.6213 79.0377 34.2735 79.0706 32.8073 76.0255L1.85278 11.7353C0.574113 9.07956 2.50929 5.99999 5.45679 5.99999L66.1753 5.99999C69.0965 5.99999 71.0325 9.02959 69.8052 11.6805L40.0412 75.9707Z" stroke="#6EFF8E" strokeWidth="2"/>
@@ -18,7 +18,7 @@ const RenderImage = ({ image }) => {
                     <path opacity="0.2" d="M40.7202 75.6085C39.5587 78.7976 35.2033 79.1821 33.5011 76.2458L2.46679 22.7113C1.06984 20.3016 2.50201 17.2375 5.24678 16.7636L59.1691 7.45322C62.1975 6.93033 64.6599 9.87605 63.6082 12.7637L40.7202 75.6085Z" stroke="#6EFF8E" strokeWidth="2"/>
 			  	</g>
 		  	)
-      	case "Trust":
+      	case 'Trust':
     	  	return(
     		  	<g>
     		  		<rect x="1" y="1" width="78" height="78" rx="9" stroke="#6EC2FF" strokeWidth="2"/>
@@ -26,7 +26,7 @@ const RenderImage = ({ image }) => {
                     <rect opacity="0.2" x="64" y="16" width="48" height="48" rx="9" transform="rotate(90 64 16)" stroke="#6EC2FF" strokeWidth="2"/>
     		  	</g>
     	  	)
-      	case "Communication":
+      	case 'Communication':
     	  	return(
     		  	<g>
                     <circle cx="40" cy="40" r="39" stroke="#8B6EFF" strokeWidth="2"/>
@@ -35,7 +35,7 @@ const RenderImage = ({ image }) => {
     		  	</g>
     	  	)
 	  	default:
-	    	return ""
+	    	return ''
 	} 
 }
 

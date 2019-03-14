@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-const IntroductionWrapper = styled.div`
+const IntroductionWrapper = styled.header`
 	position: relative;
 	padding-top: 60px;
 
@@ -41,7 +41,9 @@ class Introduction extends Component {
 	      	<IntroductionWrapper>
       			<IntroGroup>
       				<Title>Hi there <span role="img" aria-label="wave">👋</span></Title>
-      				<Text>I'm a frontend developer who worked for several years as Systems Analyst before deciding to pursue my passion for programming.</Text>
+      				<Text>
+      					I'm a frontend developer who worked for several years as Systems Analyst before deciding to pursue my passion for programming.
+      				</Text>
       			</IntroGroup>
 	      	</IntroductionWrapper>
 	    );

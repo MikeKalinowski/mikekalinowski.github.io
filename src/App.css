@@ -12,6 +12,11 @@ body {
   background-color: black;
 }
 
+/*For old browsers*/
+section, article, aside, footer, header, nav {
+  display: block;
+}
+
 ::selection {
   background: #D9FF6E;
   color: white;
