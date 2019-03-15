@@ -40,8 +40,8 @@ class Introduction extends Component {
 	    return (
 	      	<IntroductionWrapper>
       			<IntroGroup>
-      				<Title>Hi there <span role="img" aria-label="wave">👋</span></Title>
-      				<Text>
+      				<Title className="wow fadeIn">Hi there <span role="img" aria-label="wave">👋</span></Title>
+      				<Text className="wow fadeIn delay-1s">
       					I'm a frontend developer who worked for several years as Systems Analyst before deciding to pursue my passion for programming.
       				</Text>
       			</IntroGroup>

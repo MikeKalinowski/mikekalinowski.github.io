@@ -101,7 +101,7 @@ class Contact extends Component {
     	return (
       		<ContactWrapper id="contact">
             <ContactTopWrapper>
-              <Title>
+              <Title className="wow fadeInUp">
                 To get in touch, <br />
                 just write to <EmailLink text="hi@devmike.pro" url="mailto:hi@devmike.pro"/>
               </Title>

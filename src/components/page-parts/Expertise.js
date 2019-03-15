@@ -75,7 +75,7 @@ class Expertise extends Component {
   	render() {
 	    return (
 	      	<ExpertiseWrapper>
-	      		<LeftWrapper>
+	      		<LeftWrapper className="animated fadeIn delay-1s">
 	      			<Title>Expertise</Title>
 	      			<Text>
 	      				Short intro about your experience, more info about your experience, more info about your experience, more info about your experience, 
@@ -84,7 +84,7 @@ class Expertise extends Component {
 	      				download resume
 	      			</Resume>
 	      		</LeftWrapper>
-	      		<RightWrapper className="rellax" data-rellax-speed="-1.5" data-rellax-percentage="0.6">
+	      		<RightWrapper className="rellax animated fadeIn delay-1s" data-rellax-speed="-1" data-rellax-percentage="0.5">
 	      			{this.logos.map(logo => <TechCard logo={logo} key={logo}/>)}	      			
 	      		</RightWrapper>
 	      	</ExpertiseWrapper>

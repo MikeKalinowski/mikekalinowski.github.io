@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import styled, { ThemeProvider } from 'styled-components'
+import WOW from 'wow.js'
+import { fadeInUp } from 'animate.css'
 
 import './components/constant/fonts.css';
 import { Theme } from './components/constant/theme.js';
@@ -35,6 +37,9 @@ const MainWrapper = styled.div`
 `
 
 class App extends Component {
+  componentDidMount() {
+    new WOW().init();
+  }
   render() {
     return (
       <ThemeProvider theme={Theme}>
