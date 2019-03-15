@@ -32,7 +32,7 @@ const ProjectsWrapper = styled.section`
 		@media (min-width: 350px) {
 			transform: translate3d(-47px, 88px, 0);
   		}
-}
+	}
 	#image2 {
 		transform: translate3d(30px, 65px, 0);
 
@@ -90,7 +90,6 @@ const ImagesWrapper = styled.div`
 	:hover img:nth-child(1) {
 		opacity: 1;
 		z-index: 2;
-		transform: scale(1.05, 1.05);
 	}
 	
 	:hover img:nth-child(2) {
@@ -104,11 +103,14 @@ const Image1 = styled.img`
 	background-color: grey;
 	border-radius: 10px;
 	opacity: 0.3;
-	transition: translate3d 0.5s ease-out;
+	transition: opacity, z-index;
+	transition-duration: 0.5s;
+	transition-timing-function: ease-out;
 	width: 65vw
-	max-width: 400px;
+	max-width: 340px;
+	max-height: 220px;
 	@media (min-width: 768px) {
-		width: initial;
+		width: 340px;
   	}
 `
 
@@ -118,12 +120,14 @@ const Image2 = styled.img`
 	left: 0;
 	background-color: grey;
 	border-radius: 10px;
-	transition: all 0.5s ease-out;
+	transition: opacity, z-index;
+	transition-duration: 0.5s;
+	transition-timing-function: ease-out;
 	width: 65vw
 	max-width: 340px;
 	max-height: 220px;
 	@media (min-width: 768px) {
-		width: initial;
+		width: 340px;
   	}
 `
 

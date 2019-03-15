@@ -59,14 +59,13 @@ const ListElement = styled.li`
 
 const StyledButton = styled(Button)`
 	position: relative;
-  	top: 50%;
-  	transform: translate(0, -50%);
+  	top: calc(50% - 13px); // Needed to hardcode this or it would move when hovered
 `
 
 class Navigation extends Component {
   	render() {
     	return (
-      		<NavigationWrapper>
+      		<NavigationWrapper className="wow fadeIn delay-1s">
       			<LogoWrapper>
       				<Logo>devMike</Logo>
       				<Text>[frontend]</Text>

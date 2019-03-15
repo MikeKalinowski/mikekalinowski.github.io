@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 const IntroductionWrapper = styled.header`
 	position: relative;
@@ -23,6 +23,24 @@ const Title = styled.div`
   	}
 `
 
+const waveAnimation = keyframes`
+	50% {
+	  transform: rotate(90deg);
+	}
+	100% {
+	  transform: rotate(0deg);
+	}
+`
+
+const Wave = styled.span`
+	display: inline-block;
+	animation: ${waveAnimation};
+	animation-delay: 0.5s;
+	animation-duration: 1.5s;
+	animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+	transform-origin: 100% 100%;
+`
+
 const Text = styled.div`
 	padding-top: 20px;
 	font-size: 20px;
@@ -40,7 +58,7 @@ class Introduction extends Component {
 	    return (
 	      	<IntroductionWrapper>
       			<IntroGroup>
-      				<Title className="wow fadeIn">Hi there <span role="img" aria-label="wave">👋</span></Title>
+      				<Title className="wow fadeIn">Hi there <Wave role="img" aria-label="wave">👋</Wave></Title>
       				<Text className="wow fadeIn delay-1s">
       					I'm a frontend developer who worked for several years as Systems Analyst before deciding to pursue my passion for programming.
       				</Text>
