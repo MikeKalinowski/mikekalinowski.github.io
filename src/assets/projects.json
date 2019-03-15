@@ -42,7 +42,7 @@
     "image1": "rpg1",
     "image2": "rpg2",
     "title": "RPG Game",
-    "text": "Browser RPG game created with vanilla JS. Some of the implemented features include travelling through different locations with unique monsters and gathering new equipment",
+    "text": "Browser RPG game created with vanilla JS. Some of the implemented features include travelling through different locations with unique monsters, gathering new equipment and gaining levels",
     "tags": ["JS", "HTML", "CSS"],
     "links": [
         {

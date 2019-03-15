@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import styled, { ThemeProvider } from 'styled-components'
 import WOW from 'wow.js'
-import animate from 'animate.css'
+import 'animate.css'
 
 import './components/constant/fonts.css';
 import { Theme } from './components/constant/theme.js';

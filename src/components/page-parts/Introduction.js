@@ -58,9 +58,9 @@ class Introduction extends Component {
 	    return (
 	      	<IntroductionWrapper>
       			<IntroGroup>
-      				<Title className="wow fadeIn">Hi there <Wave role="img" aria-label="wave">👋</Wave></Title>
+      				<Title className="wow fadeIn">Hi there <Wave><span role="img" aria-label="wave">👋</span></Wave></Title>
       				<Text className="wow fadeIn delay-1s">
-      					I'm a frontend developer who worked for several years as Systems Analyst before deciding to pursue my passion for programming.
+      					I'm a frontend developer who had worked for several years as Systems Analyst before deciding to pursue my passion for programming.
       				</Text>
       			</IntroGroup>
 	      	</IntroductionWrapper>
