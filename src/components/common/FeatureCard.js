@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
+import WOW from 'wow.js'
 
 import RenderImage from '../common/RenderImage'
 
@@ -34,8 +35,19 @@ const Text = styled.div`
 
 
 const FeatureCard = ({ title, text }) => {
+	useEffect(() => {
+	// Needed for scroll-reveal animations of svg elements
+	 	const wow2 = new WOW(
+		    {
+		      	boxClass:     'wow2',
+		      	animateClass: 'animateSvg',
+		    }
+		)
+		wow2.init();
+	});
+
 	return(
-		<FeatureCardWrapper>
+		<FeatureCardWrapper className="wow2 animateSvg">
 			<Image viewBox="0 0 80 80"><RenderImage image={title} /></Image>
 			<Title>{title}</Title>
 			<Text>{text}</Text>

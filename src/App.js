@@ -38,7 +38,8 @@ const MainWrapper = styled.div`
 
 class App extends Component {
   componentDidMount() {
-    new WOW().init();
+    // Needed for scroll-reveal animations with classname "wow"
+    new WOW().init(); 
   }
   render() {
     return (
