@@ -78,7 +78,7 @@ class Expertise extends Component {
 	      		<LeftWrapper className="animated fadeIn delay-1s">
 	      			<Title>Expertise</Title>
 	      			<Text>
-	      				Short intro about your experience, more info about your experience, more info about your experience, more info about your experience, 
+	      				My specialization lies in web development with Javascript and React's ecosystem, including Styled components, Gatsby and GraphQL. Experience in Business analysis allows me to better understand what brings value to clients and what makes products great. 
 	      			</Text>
 	      			<Resume text="download resume" url="#">
 	      				download resume

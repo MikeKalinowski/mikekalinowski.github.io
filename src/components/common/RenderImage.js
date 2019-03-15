@@ -10,7 +10,7 @@ const RenderImage = ({ image }) => {
                     <rect opacity="0.5" x="-6.58566" y="40" width="65.8822" height="65.8822" rx="19" transform="rotate(-45 -6.58566 40)" stroke="#FF776E" strokeWidth="2"/>
     	  		</g>
 		  	)
-	  	case 'Agile':
+	  	case 'Agility':
 		  	return(
 			  	<g>
 			  		<path d="M40.0412 75.9707C38.6213 79.0377 34.2735 79.0706 32.8073 76.0255L1.85278 11.7353C0.574113 9.07956 2.50929 5.99999 5.45679 5.99999L66.1753 5.99999C69.0965 5.99999 71.0325 9.02959 69.8052 11.6805L40.0412 75.9707Z" stroke="#6EFF8E" strokeWidth="2"/>
