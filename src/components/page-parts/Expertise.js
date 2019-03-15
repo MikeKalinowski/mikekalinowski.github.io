@@ -84,7 +84,7 @@ class Expertise extends Component {
 	      				download resume
 	      			</Resume>
 	      		</LeftWrapper>
-	      		<RightWrapper className="rellax" data-rellax-speed="-1.5" data-rellax-percentage="0.4">
+	      		<RightWrapper className="rellax" data-rellax-speed="-1.5" data-rellax-percentage="0.6">
 	      			{this.logos.map(logo => <TechCard logo={logo} key={logo}/>)}	      			
 	      		</RightWrapper>
 	      	</ExpertiseWrapper>

@@ -104,7 +104,7 @@ const Image1 = styled.img`
 	background-color: grey;
 	border-radius: 10px;
 	opacity: 0.3;
-	transition: all 0.5s ease-out;
+	transition: translate3d 0.5s ease-out;
 	width: 65vw
 	max-width: 400px;
 	@media (min-width: 768px) {
@@ -202,11 +202,12 @@ class Projects extends Component {
 		      					target="_blank" 
 		      					rel="noopener noreferrer"
 		      				>
-		      					<ImagesWrapper className="rellaxProj" data-rellax-speed="-1" data-rellax-percentage="0.5">
+		      					<ImagesWrapper className="rellaxProj" data-rellax-speed="-0.7" data-rellax-percentage="0.7">
 		      						<Image1 
 		      							src={this.pickImage(project.image1)} 
 		      							id={'correction' + index}
 		      							role="presentation"
+		      							className="rellaxProj" data-rellax-speed="-0.5" data-rellax-percentage="0.5"
 		      						/>  {/*id is added to correct Image2 translation with padding*/}
 		      						<Image2 
 		      							src={this.pickImage(project.image2)} 
