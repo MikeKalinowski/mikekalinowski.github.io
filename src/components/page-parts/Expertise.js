@@ -7,6 +7,7 @@ import TechCard from '../common/TechCard'
 
 const ExpertiseWrapper = styled.section`
 	padding-top: 80px;
+
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
@@ -19,11 +20,9 @@ const ExpertiseWrapper = styled.section`
 `
 
 const LeftWrapper = styled.div`
-	width: 75%;
 	
 	@media ${props => props.theme.layout.tablet} {
 		padding-right: 40px;
-		width: 60%;
   	}
 `
 
@@ -49,6 +48,15 @@ const Title = styled.h1`
 const Text = styled.div`
 	padding-top: 20px;
 	font-size: 13px;
+	width: 75%;
+
+	@media ${props => props.theme.layout.tablet} {
+		width: 340px;
+  	}
+
+	@media ${props => props.theme.layout.laptop} {
+		width: 380px;
+  	}
 `
 
 const Resume = styled(Button)`
@@ -75,7 +83,7 @@ class Expertise extends Component {
   	render() {
 	    return (
 	      	<ExpertiseWrapper>
-	      		<LeftWrapper className="animated fadeIn delay-1s">
+	      		<LeftWrapper className="animated fadeIn delay-2s">
 	      			<Title>Expertise</Title>
 	      			<Text>
 	      				My specialization lies in web development with Javascript and React's ecosystem, including Styled components, Gatsby and GraphQL. Experience in Business analysis allows me to better understand what brings value to clients and what makes products great. 
@@ -84,7 +92,7 @@ class Expertise extends Component {
 	      				download resume
 	      			</Resume>
 	      		</LeftWrapper>
-	      		<RightWrapper className="rellax animated fadeIn delay-1s" data-rellax-speed="-1" data-rellax-percentage="0.5">
+	      		<RightWrapper className="rellax animated fadeIn delay-2s" data-rellax-speed="-1" data-rellax-percentage="0.5">
 	      			{this.logos.map(logo => <TechCard logo={logo} key={logo}/>)}	      			
 	      		</RightWrapper>
 	      	</ExpertiseWrapper>

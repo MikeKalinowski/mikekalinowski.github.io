@@ -7,7 +7,7 @@ export const Theme = {
   layout: {
     tablet: `(min-width: 768px)`,
     laptop: `(min-width: 1024px)`,
-    contentWidthDesktop: '900px',
+    contentWidthDesktop: '960px',
     wrapperPaddingDesktop: '120px 0px 120px 0px',
     wrapperPaddingMobile: '80px 20px 0 20px',
     navHeightMobile: '60px',

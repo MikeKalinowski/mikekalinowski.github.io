@@ -132,7 +132,7 @@ const Image2 = styled.img`
 `
 
 const Description = styled.div`
-	width: 360px;
+	width: 380px;
 	padding-top: 40px;
 
 	@media ${props => props.theme.layout.tablet} {
@@ -201,25 +201,19 @@ class Projects extends Component {
 	      		{projects.map((project, index) => {
 	      			return (
 		      			<SingleProjectWrapper key={project.title} id="projectWrapper">
-		      				<a 
-		      					href={project.links[0].address} 
-		      					target="_blank" 
-		      					rel="noopener noreferrer"
-		      				>
-		      					<ImagesWrapper className="rellaxProj" data-rellax-speed="-0.7" data-rellax-percentage="0.7">
-		      						<Image1 
-		      							src={this.pickImage(project.image1)} 
-		      							id={'correction' + index}
-		      							role="presentation"
-		      							className="rellaxProj" data-rellax-speed="-0.5" data-rellax-percentage="0.5"
-		      						/>  {/*id is added to correct Image2 translation with padding*/}
-		      						<Image2 
-		      							src={this.pickImage(project.image2)} 
-		      							id={'image' + index}
-		      							role="presentation"
-		      						/> 	{/*id is added to translate image*/}
-		      					</ImagesWrapper>
-		      				</a>
+	      					<ImagesWrapper className="rellaxProj" data-rellax-speed="-0.7" data-rellax-percentage="0.7">
+	      						<Image1 
+	      							src={this.pickImage(project.image1)} 
+	      							id={'correction' + index}
+	      							role="presentation"
+	      							className="rellaxProj" data-rellax-speed="-0.6" data-rellax-percentage="0.5"
+	      						/>  {/*id is added to correct Image2 translation with padding*/}
+	      						<Image2 
+	      							src={this.pickImage(project.image2)} 
+	      							id={'image' + index}
+	      							role="presentation"
+	      						/> 	{/*id is added to translate image*/}
+	      					</ImagesWrapper>
 		      				<Description className="wow fadeIn"> 
 		      					<Title>
 		      						{project.title}

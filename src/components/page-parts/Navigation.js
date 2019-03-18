@@ -65,7 +65,7 @@ const StyledButton = styled(Button)`
 class Navigation extends Component {
   	render() {
     	return (
-      		<NavigationWrapper className="wow fadeIn delay-1s">
+      		<NavigationWrapper className="wow fadeIn" data-wow-delay="1.3s">
       			<LogoWrapper>
       				<Logo>devMike</Logo>
       				<Text>[frontend]</Text>
@@ -73,7 +73,7 @@ class Navigation extends Component {
       			<Links>
       				<List>
       					<ListElement>
-      						<StyledButton text="contact" url="#contact" />
+      						<StyledButton text="contact" url="mailto:hi@devmike.pro" />
       					</ListElement>
       				</List>
       			</Links>

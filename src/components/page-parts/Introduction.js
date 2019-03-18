@@ -36,7 +36,7 @@ const Wave = styled.span`
 	display: inline-block;
 	animation: ${waveAnimation};
 	animation-delay: 0.5s;
-	animation-duration: 1.5s;
+	animation-duration: 1s;
 	animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
 	transform-origin: 100% 100%;
 `
@@ -49,6 +49,7 @@ const Text = styled.div`
 	@media ${props => props.theme.layout.tablet} {
 		padding-top: 32px;
 		font-size: 32px;
+		max-width: 80%;
   	}
 `
 
@@ -59,7 +60,7 @@ class Introduction extends Component {
 	      	<IntroductionWrapper>
       			<IntroGroup>
       				<Title className="wow fadeIn">Hi there <Wave><span role="img" aria-label="wave">👋</span></Wave></Title>
-      				<Text className="wow fadeIn delay-1s">
+      				<Text className="wow fadeIn" data-wow-delay="1.6s">
       					I'm a frontend developer who had worked for several years as Systems Analyst before deciding to pursue my passion for programming.
       				</Text>
       			</IntroGroup>

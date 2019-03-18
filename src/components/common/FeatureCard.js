@@ -5,16 +5,19 @@ import WOW from 'wow.js'
 import RenderImage from '../common/RenderImage'
 
 const FeatureCardWrapper = styled.div`
-	width: 220px; 
+	width: 215px; 
 	margin: 0 25px;
 	padding-top: 40px;
 	text-align: center;
 
 	@media ${props => props.theme.layout.tablet} {
-		margin: 0 15px
+		margin: 0 15px;
 		padding-top: 60px;
-		width: 160px;
 		text-align: initial;
+  	}
+
+	@media ${props => props.theme.layout.laptop} {
+		margin: 0;
   	}
 `
 

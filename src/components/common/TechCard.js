@@ -16,14 +16,14 @@ const TechCardWrapper = styled.div`
 	@media (min-width: 320px) {
 		width: 128px;
 		height: 80px;
-		margin: 4px;
+		margin: 2px;
 		transform: scale(0,8, 0,8);
   	}
 
 	@media (min-width: 380px) {
-		width: 160px;
+		width: 156px;
 		height: 100px;
-		margin: 4px;
+		margin: 2px;
 		transform: scale(1, 1);
   	}
 `
