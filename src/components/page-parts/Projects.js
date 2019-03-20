@@ -214,7 +214,7 @@ class Projects extends Component {
 	      							role="presentation"
 	      						/> 	{/*id is added to translate image*/}
 	      					</ImagesWrapper>
-		      				<Description className="wow fadeIn"> 
+		      				<Description className="wow fadeInUpSmall"> 
 		      					<Title>
 		      						{project.title}
 		      					</Title>

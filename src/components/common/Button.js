@@ -7,14 +7,13 @@ const StyledButton = styled.button`
 	position: relative;
 	background: none;
 	border: none;
-	padding: 0 2px;
+	padding: 3px 2px 5px;
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
 	letter-spacing: -0.04em;
 	font-size: 13px;
 	color: ${props => props.theme.color.accent};
-	padding-bottom: 5px;
 	transition: all 200ms ease;
 
 	:after {

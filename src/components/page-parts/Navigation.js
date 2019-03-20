@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { showConfetti } from '../common/Confetti'
 
 import Button from '../common/Button'
 
@@ -44,6 +45,8 @@ const Links = styled.nav`
 `
 
 class Navigation extends Component {
+	handleClick = () => {console.log("test")}
+
   	render() {
     	return (
       		<NavigationWrapper className="animated wow fadeIn" data-wow-delay="1.3s">
@@ -51,7 +54,7 @@ class Navigation extends Component {
       				<Logo>devMike</Logo>
       				<Text>[frontend]</Text>
       			</LogoWrapper>
-      			<Links>
+      			<Links onClick={showConfetti}>
       				<Button text="contact" url="mailto:hi@devmike.pro" />
       			</Links>
       		</NavigationWrapper>

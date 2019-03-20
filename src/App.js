@@ -63,7 +63,6 @@ class App extends Component {
     return (
       <ThemeProvider theme={Theme}>
         <MainWrapper>
-          {console.log("main", this.state.dimensions)}
           <Navigation />
           <Introduction />
           <Expertise />

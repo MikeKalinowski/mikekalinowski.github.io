@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { showConfetti } from '../common/Confetti'
 
 import Button from '../common/Button'
 
@@ -103,7 +104,7 @@ class Contact extends Component {
             <ContactTopWrapper>
               <Title className="wow fadeInUp">
                 To get in touch, <br />
-                just write to <EmailLink text="hi@devmike.pro" url="mailto:hi@devmike.pro"/>
+                just write to <span onClick={showConfetti}><EmailLink text="hi@devmike.pro" url="mailto:hi@devmike.pro"/></span>
               </Title>
             </ContactTopWrapper>
             <ContactBottomWrapper>

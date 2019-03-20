@@ -61,7 +61,6 @@ const FeatureCard = ({ title, text, index, dimensions }) => {
 			className="wow2 animateSvg" 
 			data-wow-delay={runDelayedAnimation()}
 		>
-			{console.log(dimensions)}
 			<Image viewBox="0 0 80 80"><RenderImage image={title} /></Image>
 			<Title>{title}</Title>
 			<Text>{text}</Text>
