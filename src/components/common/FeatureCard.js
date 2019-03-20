@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import WOW from 'wow.js'
+import './FeatureCard.css';
 
 import RenderImage from '../common/RenderImage'
 
@@ -51,7 +52,7 @@ const FeatureCard = ({ title, text, index, dimensions }) => {
 	// Runs animations based on screen width and order of items. Each item start 0.5s after the last
 	const runDelayedAnimation = () => {
 		let additionalHeightDelay = 0;
-		(dimensions.innerHeight > 1100) && (additionalHeightDelay = 2) // This was added for the animation not to run on page load when screen is > 27inch
+		(dimensions.innerHeight > 1100) && (additionalHeightDelay = 2) // This was added so that animation wouldn't run on page load when screen is > 27inch
 		return (dimensions.innerWidth > 1024) ? `${0.5 * index + additionalHeightDelay}s` : "0s"		
 	}
 

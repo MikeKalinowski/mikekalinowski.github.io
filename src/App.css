@@ -24,23 +24,7 @@ section, article, aside, footer, header, nav {
 }
 
 
-/*SVG animation in "WorkTogether"*/
-.animateSvg {
-  stroke-dasharray: 300;
-  stroke-dashoffset: 300;
-  animation: dash 3s linear forwards;
-  animation-iteration-count: 1;
-  animation-timing-function: linear;
-}
-
-@keyframes dash {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-
-/*Custom fadeInUp based on animate.css one*/
+/*Custom fadeInUp*/
 @keyframes fadeInUpSmall {
   from {
     opacity: 0;

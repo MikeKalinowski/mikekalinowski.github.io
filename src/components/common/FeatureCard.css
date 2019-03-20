@@ -1,0 +1,14 @@
+/*SVG animation in "WorkTogether"*/
+.animateSvg {
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation: dash 2s linear forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

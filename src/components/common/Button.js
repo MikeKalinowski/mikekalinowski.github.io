@@ -1,11 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 
+// Important: Remember to add className="animated" to parent or wow.js may bug the animation. E.g. Navigation.js
+
 const StyledButton = styled.button`
 	position: relative;
 	background: none;
 	border: none;
-	padding: 0;
+	padding: 0 2px;
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
@@ -15,32 +17,36 @@ const StyledButton = styled.button`
 	padding-bottom: 5px;
 	transition: all 200ms ease;
 
-	// Effect by Emil Kowalski - https://emilkowalski.github.io/css-effects-snippets/
 	:after {
 	    content: '';
 	    position: absolute;
+	    z-index: -1;
 	    height: 1px;
 	    width: 100%;
 	    left: 0;
 	    bottom: 0;
-	    background: ${props => props.theme.color.accent};
-	    transition: all 200ms ease;
+	    background: linear-gradient(180deg, #D9FF6E 0%, #8BFF6E 100%);
+	    transition: all 300ms ease;
 	}
 
 	:hover:after {
-	    opacity: 0;
-	    transform: translateY(3px);
+	    height: 100%;
 	}
 
 	:hover {
-		color: white;
+		color: black;
+		font-weight: bold;
 	}
 
 `
 
 const Button = ({ text, url, className, leadsOutside }) => {
 	return(
-		<a href={url} target={leadsOutside ? "_blank" : ""} rel={leadsOutside ? "noopener noreferrer" : ""}>
+		<a 
+			href={url} 
+			target={leadsOutside ? "_blank" : ""} 
+			rel={leadsOutside ? "noopener noreferrer" : ""}
+		>
 			<StyledButton className={className}>
 				{text}
 			</StyledButton>
