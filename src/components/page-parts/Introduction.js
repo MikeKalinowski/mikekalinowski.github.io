@@ -60,7 +60,7 @@ class Introduction extends Component {
 	      	<IntroductionWrapper>
       			<IntroGroup>
       				<Title className="wow fadeIn">Hi there <Wave><span role="img" aria-label="wave">👋</span></Wave></Title>
-      				<Text className="wow fadeIn" data-wow-delay="1.6s">
+      				<Text className="wow fadeInUpSmall" data-wow-delay="1.6s">
       					I'm a frontend developer who had worked for several years as Systems Analyst before deciding to pursue my passion for programming.
       				</Text>
       			</IntroGroup>

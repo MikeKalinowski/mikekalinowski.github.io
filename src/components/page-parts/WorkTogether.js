@@ -35,12 +35,14 @@ class WorkTogether extends Component {
 	      	<WorkTogetherWrapper>
 	      		<Title>Why should we work together?</Title>
 	      		<FeaturesWrapper>
-	      			{features.map(feature => {
+	      			{features.map((feature, index) => {
 	      				return(
 	      					<FeatureCard 
 	      						title={feature.title} 
 	      						text={feature.text} 
 	      						key={feature.title}
+	      						index={index}
+	      						dimensions={this.props.dimensions}
 	      					/>
 	      				)
 	      			})}

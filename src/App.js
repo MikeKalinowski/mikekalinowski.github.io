@@ -37,7 +37,25 @@ const MainWrapper = styled.div`
 `
 
 class App extends Component {
+  state = {
+    dimensions: {
+      innerWidth: 0,
+      innerHeight: 0
+    }
+  }
+
   componentDidMount() {
+    // Checking window width and height for js "media queries"
+    const checkDimensions = () => {
+      this.setState({dimensions: {
+        innerWidth: window.innerWidth, 
+        innerHeight: window.innerHeight
+      }});
+
+    }
+    checkDimensions();
+    window.addEventListener('resize', checkDimensions);
+
     // Needed for scroll-reveal animations with classname "wow"
     new WOW().init(); 
   }
@@ -45,10 +63,11 @@ class App extends Component {
     return (
       <ThemeProvider theme={Theme}>
         <MainWrapper>
+          {console.log("main", this.state.dimensions)}
           <Navigation />
           <Introduction />
           <Expertise />
-          <WorkTogether />
+          <WorkTogether dimensions={this.state.dimensions}/>
           <Projects />
           <Contact />
         </MainWrapper>

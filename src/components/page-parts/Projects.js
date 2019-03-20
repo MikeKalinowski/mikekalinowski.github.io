@@ -201,12 +201,12 @@ class Projects extends Component {
 	      		{projects.map((project, index) => {
 	      			return (
 		      			<SingleProjectWrapper key={project.title} id="projectWrapper">
-	      					<ImagesWrapper className="rellaxProj" data-rellax-speed="-0.7" data-rellax-percentage="0.7">
+	      					<ImagesWrapper className="rellaxProj" data-rellax-speed="-0.6" data-rellax-percentage="0.7">
 	      						<Image1 
 	      							src={this.pickImage(project.image1)} 
 	      							id={'correction' + index}
 	      							role="presentation"
-	      							className="rellaxProj" data-rellax-speed="-0.6" data-rellax-percentage="0.5"
+	      							className="rellaxProj" data-rellax-speed="-0.7" data-rellax-percentage="0.5"
 	      						/>  {/*id is added to correct Image2 translation with padding*/}
 	      						<Image2 
 	      							src={this.pickImage(project.image2)} 
