@@ -86,16 +86,6 @@ const SingleProjectWrapper = styled.div`
 
 const ImagesWrapper = styled.div`
 	position: relative;
-
-	:hover img:nth-child(1) {
-		opacity: 1;
-		z-index: 2;
-	}
-	
-	:hover img:nth-child(2) {
-		opacity: 0.3;
-		z-index: 1;
-	}
 `
 
 const Image1 = styled.img`

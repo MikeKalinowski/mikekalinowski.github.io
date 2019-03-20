@@ -34,7 +34,7 @@ const StyledButton = styled.button`
 
 	:hover {
 		color: black;
-		font-weight: bold;
+		font-weight: 700;
 	}
 
 `
