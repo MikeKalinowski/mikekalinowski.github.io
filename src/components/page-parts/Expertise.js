@@ -88,7 +88,11 @@ class Expertise extends Component {
 	      			<Text>
 	      				My specialization lies in web development with Javascript and React's ecosystem, including Styled components, Gatsby and GraphQL. Experience in Business analysis allows me to better understand what brings value to clients and what makes products great. 
 	      			</Text>
-	      			<Resume text="download resume" url="#">
+	      			<Resume 
+	      				text="download resume" 
+	      				url="https://drive.google.com/open?id=1itODkr68Wi5JRRE_Dd9ArUhqi1JWrZ50"
+	      				leadsOutside
+	      			>
 	      				download resume
 	      			</Resume>
 	      		</LeftWrapper>
