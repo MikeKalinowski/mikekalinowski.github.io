@@ -31,18 +31,11 @@ const FeaturesWrapper = styled.div`
 
 class WorkTogether extends Component {
 
-	// This was added so that text would properly delay on page load when screen is > 27inch
-	runDelayedAnimation = () => {
-		let additionalHeightDelay = 0;
-		(this.props.dimensions.innerHeight > 1100) && (additionalHeightDelay = 2.3) 
-		return `${additionalHeightDelay}s`		
-	}
-
   	render() {
 	    return (
 	      	<WorkTogetherWrapper
 	      		className="wow fadeInUpSmall" 
-	      		data-wow-delay={this.runDelayedAnimation()}
+	      		data-wow-delay={this.props.runDelayedAnimation(1100, 2.3)}
 	      	>
 	      		<Title >Why should we work together?</Title>
 	      		<FeaturesWrapper>

@@ -59,14 +59,23 @@ class App extends Component {
     // Needed for scroll-reveal animations with classname "wow"
     new WOW().init(); 
   }
+
+  // This was added so that text would properly delay on page load when screen is > 27inch
+  runDelayedAnimation = (height, delay) => {
+    let additionalHeightDelay = 0;
+    console.log(this.state.dimensions.innerHeight);
+    (this.state.dimensions.innerHeight > height) && (additionalHeightDelay = delay) 
+    return `${additionalHeightDelay}s`    
+  }
+
   render() {
     return (
       <ThemeProvider theme={Theme}>
         <MainWrapper>
           <Navigation />
           <Introduction />
-          <Expertise />
-          <WorkTogether dimensions={this.state.dimensions}/>
+          <Expertise runDelayedAnimation={this.runDelayedAnimation}/>
+          <WorkTogether dimensions={this.state.dimensions} runDelayedAnimation={this.runDelayedAnimation}/>
           <Projects />
           <Contact />
         </MainWrapper>

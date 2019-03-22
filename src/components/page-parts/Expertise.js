@@ -82,7 +82,10 @@ class Expertise extends Component {
 
   	render() {
 	    return (
-	      	<ExpertiseWrapper className="animated fadeInUpSmall delay-2s">
+	      	<ExpertiseWrapper 
+	      		className="wow fadeInUpSmall"
+	      		data-wow-delay={this.props.runDelayedAnimation(600, 2)}
+	      	>
 	      		<LeftWrapper >
 	      			<Title>Expertise</Title>
 	      			<Text>
