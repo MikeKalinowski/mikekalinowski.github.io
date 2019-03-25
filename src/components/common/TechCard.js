@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Tilt from 'react-tilt'
 
 import RenderLogo from './RenderLogo'
 
@@ -41,11 +42,21 @@ const Logo = styled.svg`
 
 const TechCard = ({ logo }) => {
 	return(
-		<TechCardWrapper>
+		<Tilt 
+			className="Tilt" 
+			options={{ 
+				max: 50,
+				perspective: 300,
+				reverse: true,
+				scale: 1
+			}}
+		>
+		<TechCardWrapper className="Tilt-inner">
 			<Logo viewBox="0 0 46 46">
 				<RenderLogo logo={logo}/>
 			</Logo>
 		</TechCardWrapper>
+		</Tilt>
 	)
 }
 
