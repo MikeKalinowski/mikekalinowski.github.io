@@ -98,7 +98,7 @@ class Expertise extends Component {
 	      			</Text>
 	      			<Resume 
 	      				text="download resume" 
-	      				url="https://drive.google.com/open?id=1itODkr68Wi5JRRE_Dd9ArUhqi1JWrZ50"
+	      				url="https://drive.google.com/file/d/1z3iLV9h4eCnS62rCZYLTMEqTZuRDTJmq/view"
 	      				leadsOutside
 	      			>
 	      				download resume
