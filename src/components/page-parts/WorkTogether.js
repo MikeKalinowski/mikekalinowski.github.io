@@ -8,6 +8,10 @@ const WorkTogetherWrapper = styled.section`
 	padding-top: 80px;
 
 	@media ${props => props.theme.layout.tablet} {
+		padding: ${props => props.theme.layout.wrapperPaddingTablet};
+  	}
+
+	@media ${props => props.theme.layout.laptop} {
 		padding: ${props => props.theme.layout.wrapperPaddingDesktop};
   	}
 `

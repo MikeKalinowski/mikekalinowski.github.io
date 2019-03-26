@@ -15,14 +15,21 @@ const ExpertiseWrapper = styled.section`
 
 	@media ${props => props.theme.layout.tablet} {
 		flex-wrap: initial;
+		padding: ${props => props.theme.layout.wrapperPaddingTablet};
+  	}
+
+	@media ${props => props.theme.layout.laptop} {
+		flex-wrap: initial;
 		padding: ${props => props.theme.layout.wrapperPaddingDesktop};
   	}
 `
 
 const LeftWrapper = styled.div`
-	
+	padding-bottom: 80px;
+
 	@media ${props => props.theme.layout.tablet} {
 		padding-right: 40px;
+		padding-bottom: 0px;
   	}
 `
 
@@ -30,10 +37,8 @@ const RightWrapper = styled.div`
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	padding-top: 60px;
 
 	@media ${props => props.theme.layout.tablet} {
-		padding-top: 0px;
 		justify-content: flex-end;
   	}
 `

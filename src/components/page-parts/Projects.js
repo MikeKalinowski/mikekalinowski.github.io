@@ -10,6 +10,10 @@ const ProjectsWrapper = styled.section`
 	padding: 80px 0 40px;
 
 	@media ${props => props.theme.layout.tablet} {
+		padding: ${props => props.theme.layout.wrapperPaddingTablet};
+  	}
+
+	@media ${props => props.theme.layout.laptop} {
 		padding: ${props => props.theme.layout.wrapperPaddingDesktop};
   	}
 
@@ -125,7 +129,7 @@ const Description = styled.div`
 	width: 380px;
 	padding-top: 40px;
 
-	@media ${props => props.theme.layout.tablet} {
+	@media ${props => props.theme.layout.laptop} {
 		padding-top: 0;
   	}
 `
