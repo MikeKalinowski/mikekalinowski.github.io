@@ -8,8 +8,8 @@ const RenderLogo = ({ logo }) => {
                     {/* defs are needed inside at least one sbg for the gradient to work properly on hover - defined in TechCard component*/}
                     <defs>
                         <linearGradient id="paint0_linear" x1="4.07538e-07" y1="-3.86977e-07" x2="40" y2="42" gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#B7FBFF"/>
-                            <stop offset="1" stop-color="#112748"/>
+                            <stop stopColor="#B7FBFF"/>
+                            <stop offset="1" stopColor="#112748"/>
                         </linearGradient>
                     </defs>
 		  			<path className="changeColor" d="M46 0.344971H0V46.345H46V0.344971Z" fill="#333333"/>

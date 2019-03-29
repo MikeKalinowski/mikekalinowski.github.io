@@ -46,6 +46,7 @@ const GradientWrapper = styled.div`
 	top: 50%;
 	left: 50%;
 	padding: 1.5px;
+	border-radius: 3px;
 	transform: translate(-50%, -50%);
 `
 
@@ -53,6 +54,7 @@ const GradientInnerWrapper = styled.div`
 	position: relative;
 	width: 100%;
 	height: 100%;
+	border-radius: 2px;
 	background: #0D0D0D;
 `
 
