@@ -159,6 +159,7 @@ const Tag = styled.div`
 	margin-bottom: 8px;
 	font-size: 12px;
 	font-weight: bold;
+	cursor: default;
 `
 
 const ButtonsWrapper = styled.div`

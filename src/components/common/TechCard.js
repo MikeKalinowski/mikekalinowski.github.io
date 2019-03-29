@@ -12,6 +12,15 @@ const TechCardWrapper = styled.div`
 	background: #0D0D0D;
 	transform: scale(0,7, 0,7);
 
+	// Changes color of svg logo in RenderLogo component
+	:hover .changeColor {
+		fill: url(#paint0_linear);
+	};
+
+	:hover .gradientBorder {
+		background: linear-gradient(136.4deg, #B7FBFF -0.43%, #112748 100.26%);
+	};
+
 	// Width and height is needed every time because of flexbox's strange behaviour when scaling. 
 	// Scaling is needed because of svg.
 	@media (min-width: 320px) {
@@ -27,6 +36,24 @@ const TechCardWrapper = styled.div`
 		margin: 2px;
 		transform: scale(1, 1);
   	}
+`
+
+// Divs GradientWrapper and GradientInnerWrapper are needed to add a gradient border. It's width is decided by padding on GradientWrapper
+const GradientWrapper = styled.div`
+	position: relative;
+	width: 90%;
+	height: 90%;
+	top: 50%;
+	left: 50%;
+	padding: 1.5px;
+	transform: translate(-50%, -50%);
+`
+
+const GradientInnerWrapper = styled.div`
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: #0D0D0D;
 `
 
 const Logo = styled.svg`
@@ -45,17 +72,21 @@ const TechCard = ({ logo }) => {
 		<Tilt 
 			className="Tilt" 
 			options={{ 
-				max: 50,
+				max: 30,
 				perspective: 300,
 				reverse: true,
 				scale: 1
 			}}
 		>
-		<TechCardWrapper className="Tilt-inner">
-			<Logo viewBox="0 0 46 46">
-				<RenderLogo logo={logo}/>
-			</Logo>
-		</TechCardWrapper>
+			<TechCardWrapper className="Tilt-inner">
+				<GradientWrapper className="gradientBorder">
+					<GradientInnerWrapper>
+						<Logo viewBox="0 0 46 46">
+							<RenderLogo logo={logo}/>
+						</Logo>
+					</GradientInnerWrapper>
+				</GradientWrapper>
+			</TechCardWrapper>
 		</Tilt>
 	)
 }

@@ -26,12 +26,13 @@ const StyledButton = styled.a`
 	    width: 100%;
 	    left: 0;
 	    bottom: 0;
-	    background: linear-gradient(180deg, #8BFF6E 0%, #D9FF6E 100%);
-	    transition: all 300ms ease;
+	    background: ${props => props.theme.color.accent};
+	    transition: all 300ms ease, background 3s;
 	}
 
 	:hover:after {
 	    height: 100%;
+	    background: linear-gradient(180deg, #8BFF6E 0%, #D9FF6E 100%);
 	}
 
 	:hover {
