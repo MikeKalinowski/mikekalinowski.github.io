@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { showConfetti } from '../common/Confetti'
 
-import Button from '../common/Button'
+import { showConfetti } from '../common/Confetti';
+import Button from '../common/Button';
 
 const ContactWrapper = styled.footer`
 `
 
 const ContactTopWrapper = styled.address`
-	padding: 80px 0;
+  padding: 80px 0;
   border-top: 1px solid #1A1A1A;
   border-bottom: 1px solid #1A1A1A;
   font-style: normal;
@@ -98,48 +98,48 @@ const Link = styled.a`
 `
 
 class Contact extends Component {
-  	render() {
-    	return (
-      		<ContactWrapper id="contact">
-            <ContactTopWrapper>
-              <Title className="wow fadeInUp">
-                To get in touch, <br />
-                just write to <span onClick={showConfetti}><EmailLink text="hi@devmike.pro" url="mailto:hi@devmike.pro"/></span>
-              </Title>
-            </ContactTopWrapper>
-            <ContactBottomWrapper>
-              <Logo>devMike</Logo>
-              <RightGroupWrapper>
-                <DesignedBy>
-                  <DesignedLink 
-                    href="http://kalin.pl" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                  >
-                    dsgn by kln
-                  </DesignedLink>
-                </DesignedBy>
-                <LinksGroup>
-                  <Link 
-                    href="https://www.linkedin.com/in/micha%C5%82-kalinowski-3b354715a/" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                  >
-                    linkedin
-                  </Link>
-                  <Link 
-                    href="https://github.com/MikeKalinowski/" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                  >
-                  github
-                  </Link>
-                </LinksGroup>
-              </RightGroupWrapper>
-            </ContactBottomWrapper>
-      		</ContactWrapper>
-    	);
-  	}
+  render() {
+    return (
+      <ContactWrapper id="contact">
+        <ContactTopWrapper>
+          <Title className="wow fadeInUp">
+            To get in touch, <br />
+            just write to <span onClick={showConfetti}><EmailLink text="hi@devmike.pro" url="mailto:hi@devmike.pro"/></span>
+          </Title>
+        </ContactTopWrapper>
+        <ContactBottomWrapper>
+          <Logo>devMike</Logo>
+          <RightGroupWrapper>
+            <DesignedBy>
+              <DesignedLink 
+                href="http://kalin.pl" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                dsgn by kln
+              </DesignedLink>
+            </DesignedBy>
+            <LinksGroup>
+              <Link 
+                href="https://www.linkedin.com/in/micha%C5%82-kalinowski-3b354715a/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                linkedin
+              </Link>
+              <Link 
+                href="https://github.com/MikeKalinowski/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+              github
+              </Link>
+            </LinksGroup>
+          </RightGroupWrapper>
+        </ContactBottomWrapper>
+      </ContactWrapper>
+    );
+  }
 }
 
 export default Contact;
