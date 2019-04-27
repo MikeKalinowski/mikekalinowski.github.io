@@ -4,7 +4,8 @@ import Rellax from 'rellax';
 
 import Button from '../common/Button';
 import TechCard from '../common/TechCard';
-import { runDelayedAnimation } from '../common/utils'
+import { runDelayedAnimation } from '../constant/utils'
+import { logosExpertise } from '../constant/consts'
 
 const ExpertiseWrapper = styled.section`
   padding-top: 80px;
@@ -77,7 +78,7 @@ const Resume = styled(Button)`
 class Expertise extends Component {
   constructor(props) {
     super(props)
-    this.logos = ['js', 'react', 'gatsby', 'git', 'webpack', 'graphql']
+    this.logos = logosExpertise
   }
 
   componentDidMount() {

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Tilt from 'react-tilt';
 
 import RenderLogo from './RenderLogo';
+import { tiltOptions } from '../constant/consts'
 
 const TechCardWrapper = styled.div`
   position: relative;
@@ -73,12 +74,7 @@ const TechCard = ({ logo }) => {
   return(
     <Tilt 
       className="Tilt" 
-      options={{ 
-        max: 30,
-        perspective: 300,
-        reverse: true,
-        scale: 1
-      }}
+      options={tiltOptions}
     >
       <TechCardWrapper className="Tilt-inner">
         <GradientWrapper className="gradientBorder">

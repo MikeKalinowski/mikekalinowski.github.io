@@ -44,7 +44,7 @@ const Logo = styled.div`
   color: ${props => props.theme.color.title};
   display: none;
 
-  @media (min-width: 350px) { /*Need to display:none or the design won't be pretty :(*/
+  @media (min-width: 350px) {
     display: block;
   }
 `

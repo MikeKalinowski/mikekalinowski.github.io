@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import FeatureCard from '../common/FeatureCard';
-import { runDelayedAnimation } from '../common/utils'
+import { runDelayedAnimation } from '../constant/utils'
 
 import features from '../../assets/features.json';
 
