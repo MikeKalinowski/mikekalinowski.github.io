@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import FeatureCard from '../common/FeatureCard';
+import { runDelayedAnimation } from '../common/utils'
 
 import features from '../../assets/features.json';
 
@@ -40,7 +41,7 @@ class WorkTogether extends Component {
     return (
       <WorkTogetherWrapper
         className="wow fadeInUpSmall" 
-        data-wow-delay={this.props.runDelayedAnimation(1100, 2.3)}
+        data-wow-delay={runDelayedAnimation(1100, 2.3)}
       >
         <Title >Why should we work together?</Title>
         <FeaturesWrapper>
@@ -51,7 +52,6 @@ class WorkTogether extends Component {
                 text={feature.text} 
                 key={feature.title}
                 index={index}
-                dimensions={this.props.dimensions}
               />
             )
           })}

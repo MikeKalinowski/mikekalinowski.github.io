@@ -49,11 +49,12 @@ const FeatureCard = ({ title, text, index, dimensions }) => {
     wow2.init();
   });
 
-  // Runs animations based on screen width and order of items. Each item start 0.5s after the last
+  // Runs animations based on screen width and order of items. Each item start 0.5s after the last. Differs from function in utils because depends on index screen width
   const runDelayedAnimation = () => {
-    let additionalHeightDelay = 0;
-    (dimensions.innerHeight > 1100) && (additionalHeightDelay = 2) // This was added so that animation wouldn't run on page load when screen is > 27inch
-    return (dimensions.innerWidth > 1024) ? `${0.5 * index + additionalHeightDelay}s` : "0s"    
+    const delay = 0.5 * index + 2
+    const defaultDelay = 0;
+    const shouldAddDelay = (window.innerHeight > 1100);
+    return shouldAddDelay ? `${delay}s` : `${defaultDelay}s`;
   }
 
   return(

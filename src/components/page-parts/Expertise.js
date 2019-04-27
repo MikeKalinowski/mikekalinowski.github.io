@@ -4,6 +4,7 @@ import Rellax from 'rellax';
 
 import Button from '../common/Button';
 import TechCard from '../common/TechCard';
+import { runDelayedAnimation } from '../common/utils'
 
 const ExpertiseWrapper = styled.section`
   padding-top: 80px;
@@ -73,7 +74,6 @@ const Resume = styled(Button)`
 `
 
 
-
 class Expertise extends Component {
   constructor(props) {
     super(props)
@@ -88,7 +88,7 @@ class Expertise extends Component {
     return (
       <ExpertiseWrapper 
         className="wow fadeInUpSmall"
-        data-wow-delay={this.props.runDelayedAnimation(600, 2)}
+        data-wow-delay={runDelayedAnimation(600, 2)}
       >
         <LeftWrapper>
           <Title>Expertise</Title>

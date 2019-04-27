@@ -45,24 +45,8 @@ class App extends Component {
   }
 
   componentDidMount() {
-    const checkDimensions = () => {
-      this.setState({dimensions: {
-        innerWidth: window.innerWidth, 
-        innerHeight: window.innerHeight
-      }});
-    }
-    checkDimensions();
-    window.addEventListener('resize', checkDimensions);
-
     // Needed for scroll-reveal animations with classname "wow"
     new WOW().init(); 
-  }
-
-  // This was added so that text would properly delay on page load when screen is > 27inch
-  runDelayedAnimation = (height, delay) => {
-    let additionalHeightDelay = 0;
-    (this.state.dimensions.innerHeight > height) && (additionalHeightDelay = delay) 
-    return `${additionalHeightDelay}s`    
   }
 
   render() {
@@ -71,8 +55,8 @@ class App extends Component {
         <MainWrapper>
           <Navigation />
           <Introduction />
-          <Expertise runDelayedAnimation={this.runDelayedAnimation}/>
-          <WorkTogether dimensions={this.state.dimensions} runDelayedAnimation={this.runDelayedAnimation}/>
+          <Expertise />
+          <WorkTogether />
           <Projects />
           <Contact />
         </MainWrapper>
