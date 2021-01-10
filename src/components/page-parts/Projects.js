@@ -18,7 +18,7 @@ const ProjectsWrapper = styled.section`
   }
 
   // Reversing order of image and text in projects for every second project. 2n+1 says to start by omitting the MainTitle div
-  div:nth-child(2n+1) {
+  #projectWrapper:nth-child(2n+1) {
     flex-direction: row-reverse;
   }
 
@@ -149,7 +149,6 @@ const TagsWrapper = styled.div`
   padding-top: 20px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
 `
 
 const Tag = styled.div`
