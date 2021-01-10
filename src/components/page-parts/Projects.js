@@ -30,14 +30,14 @@ const ProjectsWrapper = styled.section`
       transform: translate3d(53px, 48px, 0);
     }
   }
-  #image1 {
+  #image1, #image3 {
     transform: translate3d(-23px, 54px, 0);
 
     @media (min-width: 350px) {
       transform: translate3d(-47px, 88px, 0);
     }
   }
-  #image2 {
+  #image2, #image4 {
     transform: translate3d(30px, 65px, 0);
 
     @media (min-width: 350px) {
@@ -53,14 +53,14 @@ const ProjectsWrapper = styled.section`
       margin: 0 53px 48px 0;
     }
   }
-  #correction1 {
+  #correction1, #correction3 {
     margin: 0 0 54px 23px;
 
     @media (min-width: 350px) {
       margin: 0 0 88px 47px;
     }
   }
-  #correction2 {
+  #correction2, #correction4 {
     margin: 0 30px 65px 0;
 
     @media (min-width: 350px) {
@@ -180,6 +180,10 @@ class Projects extends Component {
 
   pickImage = (image) => {
     switch (image) {
+      case 'jll1': return require('../../assets/jll1.png');
+      case 'jll2': return require('../../assets/jll2.png');
+      case 'portfolio1': return require('../../assets/portfolio1.png');
+      case 'portfolio2': return require('../../assets/portfolio2.png');
       case 'chat1': return require('../../assets/chat1.png');
       case 'chat2': return require('../../assets/chat2.png');
       case 'gatsby1': return require('../../assets/gatsby1.png');
